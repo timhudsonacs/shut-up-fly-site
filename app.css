@@ -393,15 +393,19 @@ h1 {
 
 .game-logo {
   flex: 0 0 auto;
-  width: clamp(76px, 7vw, 92px);
+  width: clamp(132px, 12vw, 150px);
+  height: 112px;
   overflow: hidden;
-  border: 1px solid rgba(255, 207, 22, 0.42);
-  border-radius: 18px;
-  background: #087be7;
-  box-shadow: 0 10px 32px rgba(0, 119, 224, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.36);
   line-height: 0;
   text-decoration: none;
-  transform: rotate(-1deg);
+  -webkit-mask-image:
+    linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent),
+    linear-gradient(180deg, transparent, #000 5%, #000 88%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent),
+    linear-gradient(180deg, transparent, #000 5%, #000 88%, transparent);
+  mask-composite: intersect;
 }
 
 .game-logo img {
@@ -808,7 +812,7 @@ h1 {
 }
 
 @media (max-width: 620px) {
-  .game-logo { width: 68px; border-radius: 14px; }
+  .game-logo { width: 112px; height: 84px; }
   .marketing-nav { min-height: 70px; align-items: center; }
   .marketing-nav .app-links { width: auto; }
   .marketing-nav .app-links a:first-child { display: none; }

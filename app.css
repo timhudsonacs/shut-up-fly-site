@@ -385,7 +385,10 @@ h1 {
   text-wrap: balance;
 }
 
-.hero-copy h1 { font-size: clamp(4rem, 10vw, 8.7rem); }
+.hero-copy h1 {
+  font-size: clamp(4rem, 8.4vw, 8rem);
+  letter-spacing: -0.045em;
+}
 .hero-copy > p:not(.game-kicker) {
   max-width: 570px;
   margin: 24px 0 0;
@@ -616,6 +619,37 @@ h1 {
 .marketing-footer nav { display: flex; gap: 18px; }
 .marketing-footer a { color: rgba(255, 245, 220, 0.72); }
 
+@media (min-width: 861px) {
+  .game-hero {
+    background: #061824;
+  }
+
+  .game-hero::before {
+    content: "";
+    position: absolute;
+    inset: -28px;
+    background: url("/media/hero-universe-v1.jpg") center / cover no-repeat;
+    filter: blur(22px) brightness(0.34) saturate(0.78);
+    transform: scale(1.04);
+  }
+
+  .game-hero > img {
+    inset: 7% 0 7% auto;
+    width: 80%;
+    height: 86%;
+    object-fit: contain;
+    object-position: right center;
+    -webkit-mask-image:
+      linear-gradient(90deg, transparent 0%, #000 18%, #000 100%),
+      linear-gradient(180deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(90deg, transparent 0%, #000 18%, #000 100%),
+      linear-gradient(180deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    mask-composite: intersect;
+  }
+}
+
 @media (max-width: 860px) {
   .game-hero { min-height: 760px; }
   .game-hero > img { object-position: 58% center; }
@@ -634,7 +668,10 @@ h1 {
   .marketing-nav .app-links a { min-height: 40px; padding-inline: 11px; }
   .game-hero { min-height: 720px; }
   .hero-copy { padding-bottom: 44px; }
-  .hero-copy h1 { font-size: clamp(3.7rem, 20vw, 5.7rem); }
+  .hero-copy h1 {
+    font-size: clamp(3.25rem, 16.8vw, 5.1rem);
+    letter-spacing: -0.052em;
+  }
   .hero-copy > p:not(.game-kicker) { font-size: 1.02rem; }
   .hero-facts { display: grid; gap: 6px; }
   .hero-facts li + li::before { display: none; }

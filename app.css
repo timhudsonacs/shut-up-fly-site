@@ -795,6 +795,16 @@ h1 {
   }
 }
 
+@media (min-width: 861px) and (max-width: 1180px) {
+  .game-hero > img {
+    inset: 0 0 0 auto;
+    width: 106%;
+    height: 100%;
+  }
+
+  .hero-copy h1 { font-size: clamp(6.4rem, 9.4vw, 7rem); }
+}
+
 @media (max-width: 860px) {
   .game-hero { min-height: 760px; }
   .game-hero > img { object-position: 58% center; }

@@ -25,7 +25,7 @@ body {
   background:
     radial-gradient(circle at 15% 4%, rgba(255, 151, 46, 0.18), transparent 29rem),
     radial-gradient(circle at 90% 40%, rgba(255, 78, 69, 0.1), transparent 27rem),
-    linear-gradient(180deg, #0d0a07 0%, #050505 65%, #020202 100%);
+    linear-gradient(180deg, #102b31 0%, #17110c 52%, #07191f 100%);
 }
 
 a { color: inherit; }
@@ -36,7 +36,9 @@ a:focus-visible {
 }
 
 .app-shell {
-  width: min(100% - 36px, 820px);
+  position: relative;
+  z-index: 1;
+  width: min(100% - 36px, 1180px);
   margin: 0 auto;
   padding: 34px 0 56px;
 }
@@ -47,7 +49,7 @@ a:focus-visible {
   justify-content: space-between;
   gap: 20px;
   min-height: 64px;
-  margin-bottom: clamp(48px, 8vw, 82px);
+  margin-bottom: 28px;
 }
 
 .app-brand {
@@ -125,7 +127,9 @@ h1 {
   max-width: 13ch;
   margin: 0;
   font-size: clamp(3rem, 9vw, 6rem);
-  letter-spacing: -0.065em;
+  font-weight: 1000;
+  letter-spacing: -0.045em;
+  line-height: 0.94;
 }
 
 .lede {
@@ -136,20 +140,22 @@ h1 {
 }
 
 .app-card {
-  margin-top: 44px;
+  width: min(100%, 940px);
+  margin: 30px auto 0;
   padding: clamp(24px, 5vw, 42px);
   border: 1px solid var(--line);
   border-radius: 24px;
   background:
-    linear-gradient(145deg, rgba(255, 151, 46, 0.07), transparent 42%),
-    var(--panel);
+    radial-gradient(circle at 100% 0%, rgba(255, 151, 46, 0.13), transparent 28rem),
+    linear-gradient(145deg, rgba(39, 45, 38, 0.96), rgba(25, 18, 12, 0.97));
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.32);
 }
 
 .app-card h2 {
   margin: 34px 0 12px;
   font-size: clamp(1.45rem, 4vw, 2rem);
-  letter-spacing: -0.035em;
+  font-weight: 950;
+  letter-spacing: -0.03em;
 }
 
 .app-card h2:first-child { margin-top: 0; }
@@ -246,6 +252,8 @@ h1 {
 }
 
 .app-footer {
+  width: min(100%, 940px);
+  margin-inline: auto;
   display: flex;
   justify-content: space-between;
   gap: 18px;
@@ -257,6 +265,58 @@ h1 {
   font-size: 0.8rem;
 }
 
+.utility-page {
+  position: relative;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(0, 161, 202, 0.22), transparent 34rem),
+    radial-gradient(circle at 92% 72%, rgba(255, 152, 35, 0.18), transparent 32rem),
+    #07171c;
+}
+
+.utility-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url("/media/sensor-lab-v1.webp") center top / cover no-repeat;
+  opacity: 0.11;
+  filter: saturate(0.8);
+}
+
+.utility-hero {
+  position: relative;
+  min-height: clamp(430px, 52vw, 610px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: clamp(42px, 7vw, 78px);
+  border: 1px solid rgba(255, 207, 22, 0.4);
+  border-radius: 34px;
+  background: url("/media/sensor-lab-v1.webp") center / cover no-repeat;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.42);
+  isolation: isolate;
+}
+
+.utility-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(2, 16, 22, 0.96) 0%, rgba(2, 16, 22, 0.77) 43%, rgba(2, 16, 22, 0.08) 76%),
+    linear-gradient(0deg, rgba(2, 16, 22, 0.65), transparent 48%);
+}
+
+.utility-hero h1 {
+  max-width: 9ch;
+  font-size: clamp(4rem, 8vw, 7.2rem);
+}
+
+.utility-hero .eyebrow { color: var(--yellow); }
+.utility-hero .lede { max-width: 560px; color: rgba(255, 255, 255, 0.84); }
+
 .app-footer a { color: var(--muted); }
 
 @media (max-width: 620px) {
@@ -266,13 +326,26 @@ h1 {
   }
 
   .app-nav {
-    align-items: flex-start;
-    flex-direction: column;
-    margin-bottom: 48px;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
   }
 
-  .app-links { width: 100%; }
+  .app-links { width: auto; }
   .app-links a { flex: 1; justify-content: center; }
+  .utility-page .app-links a:first-child { display: none; }
+  .utility-hero {
+    min-height: 560px;
+    justify-content: flex-end;
+    padding: 34px 24px;
+    border-radius: 26px;
+    background-position: 68% center;
+  }
+  .utility-hero::before {
+    background: linear-gradient(0deg, rgba(2, 16, 22, 0.97) 0%, rgba(2, 16, 22, 0.72) 54%, rgba(2, 16, 22, 0.02) 100%);
+  }
+  .utility-hero h1 { max-width: 10ch; font-size: clamp(3.25rem, 16vw, 4.7rem); }
+  .utility-hero .lede { font-size: 1rem; }
   .privacy-summary,
   .feature-grid { grid-template-columns: 1fr; }
   .button-row { display: grid; }
@@ -286,12 +359,15 @@ h1 {
   }
 }
 
-/* Official game landing page. Legal and support pages retain the compact system above. */
+/* Official game landing page. */
 .marketing-page {
   --game-red: #f0291f;
   --game-yellow: #ffcf16;
   --game-cream: #fff5dc;
-  background: #070a09;
+  background:
+    radial-gradient(circle at 14% 38%, rgba(0, 142, 184, 0.14), transparent 34rem),
+    radial-gradient(circle at 86% 68%, rgba(240, 41, 31, 0.11), transparent 32rem),
+    linear-gradient(180deg, #07161b 0%, #17120c 48%, #06181d 100%);
   color: var(--game-cream);
   overflow-x: hidden;
 }
@@ -380,7 +456,7 @@ h1 {
   margin: 0;
   color: #fff;
   font-weight: 1000;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.045em;
   line-height: 0.91;
   text-wrap: balance;
 }
@@ -448,6 +524,24 @@ h1 {
 }
 
 .hero-facts li + li::before { content: "•"; margin-right: 22px; color: var(--game-yellow); }
+
+.proof-scene {
+  position: relative;
+  overflow: hidden;
+  border-block: 1px solid rgba(255, 207, 22, 0.3);
+  background: url("/media/gameplay-world-v1.webp") center / cover no-repeat;
+  isolation: isolate;
+}
+
+.proof-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(2, 14, 17, 0.94) 0%, rgba(2, 14, 17, 0.7) 43%, rgba(2, 14, 17, 0.15) 76%),
+    linear-gradient(0deg, rgba(2, 14, 17, 0.76), rgba(2, 14, 17, 0.08) 58%, rgba(2, 14, 17, 0.3));
+}
 
 .proof-section {
   display: grid;
@@ -579,13 +673,44 @@ h1 {
 .armoury-section { padding-block: clamp(84px, 12vw, 160px); }
 .armoury-intro { max-width: 820px; }
 
+.armoury-scene {
+  position: relative;
+  min-height: 760px;
+  overflow: hidden;
+  border-block: 1px solid rgba(255, 207, 22, 0.28);
+  background: url("/media/armoury-world-v1.webp") center / cover no-repeat;
+  isolation: isolate;
+}
+
+.armoury-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(2, 14, 19, 0.95) 0%, rgba(2, 14, 19, 0.73) 44%, rgba(2, 14, 19, 0.08) 76%),
+    linear-gradient(0deg, rgba(2, 14, 19, 0.7), transparent 55%);
+}
+
+.armoury-section {
+  min-height: 760px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.armoury-intro,
+.weapon-list,
+.valour-note { max-width: 650px; }
+
 .weapon-list { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 44px; }
 .weapon-list span {
   padding: 11px 16px;
   border: 1px solid rgba(255, 207, 22, 0.34);
   border-radius: 999px;
   color: #ffe778;
-  background: rgba(255, 207, 22, 0.055);
+  background: rgba(4, 21, 27, 0.72);
+  backdrop-filter: blur(8px);
   font-size: 0.84rem;
   font-weight: 900;
   letter-spacing: 0.04em;
@@ -595,10 +720,21 @@ h1 {
 .valour-note span { margin-right: 10px; color: var(--game-yellow); font-size: 1.5em; }
 
 .final-cta {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 24px;
   padding: clamp(54px, 9vw, 100px);
   border: 2px solid rgba(255, 207, 22, 0.52);
   border-radius: 34px;
-  background: radial-gradient(circle at 100% 0%, rgba(8, 123, 231, 0.28), transparent 36%), radial-gradient(circle at 0% 100%, rgba(240, 41, 31, 0.24), transparent 38%), #17120d;
+  background:
+    linear-gradient(90deg, rgba(2, 13, 17, 0.78), rgba(2, 13, 17, 0.62)),
+    linear-gradient(0deg, rgba(2, 13, 17, 0.84), transparent 70%),
+    url("/media/hero-universe-v1.jpg") center / cover no-repeat;
   text-align: center;
 }
 
@@ -654,11 +790,16 @@ h1 {
   .game-hero { min-height: 760px; }
   .game-hero > img { object-position: 58% center; }
   .hero-shade { background: linear-gradient(0deg, rgba(1, 8, 12, 0.96) 0%, rgba(1, 8, 12, 0.48) 58%, rgba(1, 8, 12, 0.04) 100%), linear-gradient(90deg, rgba(1, 8, 12, 0.55), transparent 70%); }
+  .proof-scene { background-position: 59% center; }
+  .proof-scene::before { background: linear-gradient(0deg, rgba(2, 14, 17, 0.94) 0%, rgba(2, 14, 17, 0.67) 54%, rgba(2, 14, 17, 0.16) 100%); }
   .proof-section { grid-template-columns: 1fr; }
   .preview-shell { margin-top: 10px; }
   .hook-grid { grid-template-columns: 1fr; }
   .hook-card { min-height: min(780px, 118vw); }
   .hook-card img { object-position: center 18%; }
+  .armoury-scene { background-position: 66% center; }
+  .armoury-scene::before { background: linear-gradient(0deg, rgba(2, 14, 19, 0.95) 0%, rgba(2, 14, 19, 0.72) 55%, rgba(2, 14, 19, 0.16) 100%); }
+  .armoury-section { justify-content: flex-end; }
 }
 
 @media (max-width: 620px) {

@@ -388,22 +388,27 @@ h1 {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  padding-block: 10px;
 }
 
-.wordmark {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 7px;
-  color: #fff;
-  font-size: 1.12rem;
-  font-weight: 1000;
-  letter-spacing: -0.045em;
-  line-height: 1;
+.game-logo {
+  flex: 0 0 auto;
+  width: clamp(76px, 7vw, 92px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 207, 22, 0.42);
+  border-radius: 18px;
+  background: #087be7;
+  box-shadow: 0 10px 32px rgba(0, 119, 224, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.36);
+  line-height: 0;
   text-decoration: none;
-  transform: skew(-5deg);
+  transform: rotate(-1deg);
 }
 
-.wordmark strong { color: var(--game-red); font-size: 1.32em; }
+.game-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 .game-hero {
   position: relative;
@@ -803,6 +808,7 @@ h1 {
 }
 
 @media (max-width: 620px) {
+  .game-logo { width: 68px; border-radius: 14px; }
   .marketing-nav { min-height: 70px; align-items: center; }
   .marketing-nav .app-links { width: auto; }
   .marketing-nav .app-links a:first-child { display: none; }

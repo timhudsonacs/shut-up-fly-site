@@ -394,18 +394,10 @@ h1 {
 .game-logo {
   flex: 0 0 auto;
   width: clamp(132px, 12vw, 150px);
-  height: 112px;
+  height: 125px;
   overflow: hidden;
   line-height: 0;
   text-decoration: none;
-  -webkit-mask-image:
-    linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent),
-    linear-gradient(180deg, transparent, #000 5%, #000 88%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent),
-    linear-gradient(180deg, transparent, #000 5%, #000 88%, transparent);
-  mask-composite: intersect;
 }
 
 .game-logo img {
@@ -807,7 +799,7 @@ h1 {
 
 @media (max-width: 860px) {
   .game-hero { min-height: 760px; }
-  .game-hero > img { object-position: 58% center; }
+  .game-hero > img { object-position: 32% center; }
   .hero-shade { background: linear-gradient(0deg, rgba(1, 8, 12, 0.96) 0%, rgba(1, 8, 12, 0.48) 58%, rgba(1, 8, 12, 0.04) 100%), linear-gradient(90deg, rgba(1, 8, 12, 0.55), transparent 70%); }
   .proof-scene { background-position: 59% center; }
   .proof-scene::before { background: linear-gradient(0deg, rgba(2, 14, 17, 0.94) 0%, rgba(2, 14, 17, 0.67) 54%, rgba(2, 14, 17, 0.16) 100%); }
@@ -822,12 +814,13 @@ h1 {
 }
 
 @media (max-width: 620px) {
-  .game-logo { width: 112px; height: 84px; }
+  .game-logo { width: 112px; height: 96px; }
   .marketing-nav { min-height: 70px; align-items: center; }
   .marketing-nav .app-links { width: auto; }
   .marketing-nav .app-links a:first-child { display: none; }
   .marketing-nav .app-links a { min-height: 40px; padding-inline: 11px; }
   .game-hero { min-height: 720px; }
+  .game-hero > img { object-position: 35% center; }
   .hero-copy { padding-bottom: 44px; }
   .hero-copy h1 {
     font-size: clamp(3.25rem, 16.8vw, 5.1rem);

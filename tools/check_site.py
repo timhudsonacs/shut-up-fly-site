@@ -4,6 +4,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, unquote, urljoin, parse_qs
 import json
 import xml.etree.ElementTree as ET
+from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://shutupfly.timhudson.com'
@@ -52,7 +53,7 @@ def path_for(url):
 
 
 urls = [node.text for node in ET.parse(ROOT / 'sitemap.xml').findall('.//{*}loc')]
-assert len(urls) == len(set(urls)) == 5, 'Sitemap should list five unique canonical pages'
+assert len(urls) == len(set(urls)) == 6, 'Sitemap should list six unique canonical pages'
 pages = {url: Page(path_for(url)) for url in urls}
 titles = []
 for url, page in pages.items():
@@ -96,7 +97,7 @@ assert set(game['@type']) == {'VideoGame', 'MobileApplication'}
 assert game['offers']['price'] == '0' and game['operatingSystem'] == 'iOS 18.0 or later'
 assert game['downloadUrl'] == APP
 assert 'aggregateRating' not in game and 'review' not in game, 'Do not invent or freeze ratings'
-for route in ('/offline-iphone-game/', '/how-to-play/'):
+for route in ('/offline-iphone-game/', '/how-to-play/', '/press/'):
     assert home.find('a', href=route), ('unlinked guide', route)
     guide = pages[ORIGIN + route]
     assert guide.find('a', href=CAMPAIGN_APP), ('missing download action', route)
@@ -104,6 +105,15 @@ for route in ('/offline-iphone-game/', '/how-to-play/'):
     assert graph[0]['url'] == ORIGIN + route
     assert graph[1]['itemListElement'][-1]['item'] == ORIGIN + route
     assert guide.find('a', href='/'), ('missing return path', route)
+
+with ZipFile(ROOT / 'press/shut-up-fly-images-and-facts.zip') as bundle:
+    assert bundle.testzip() is None, 'Corrupt press download'
+    expected = {'game-logo-cutout-v1.webp', 'hero-universe-v1.jpg', 'sensor-gameplay-v1.webp',
+                'infestation-pressure-v1.webp', 'la-chancla-v1.webp', 'facts.txt'}
+    assert set(bundle.namelist()) == expected, 'Unexpected or missing press asset'
+    for name in expected:
+        source = ROOT / ('press' if name == 'facts.txt' else 'media') / name
+        assert bundle.read(name) == source.read_bytes(), ('Stale press asset', name)
 
 robots = (ROOT / 'robots.txt').read_text()
 assert 'Disallow: /' not in robots

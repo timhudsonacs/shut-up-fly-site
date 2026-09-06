@@ -799,7 +799,7 @@ h1 {
 }
 
 .marketing-footer strong { color: var(--game-cream); font-size: 1rem; }
-.marketing-footer nav { display: flex; gap: 18px; }
+.marketing-footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
 .marketing-footer a { color: rgba(255, 245, 220, 0.72); }
 .marketing-footer small {
   grid-column: 1 / -1;

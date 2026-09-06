@@ -1,0 +1,46 @@
+SHUT UP FLY
+Official game facts, checked September 6, 2026
+
+Developer: Tim Hudson
+Website: https://shutupfly.timhudson.com/
+Press kit: https://shutupfly.timhudson.com/press/
+App Store: https://apps.apple.com/app/apple-store/id6797986930?pt=127545438&ct=website&mt=8
+Contact: timhudsonacs@gmail.com
+Platform: iPhone, iOS 18 or later
+Current public version: 1.2
+Price: Free, with no ads or in-app purchases
+Genre: Single-player action arcade
+
+SHORT DESCRIPTION
+Shut Up Fly turns your iPhone into a fly-swatting arcade. Stay still, let a fly
+land, then tap before it escapes. Real-world movement and sudden sound changes
+affect the hunt. Stop maggots hatching, complete four-hit combo keys, and earn
+weapons including La Chancla across 51 increasingly difficult environments.
+
+FEATURES
+- Fly Sense responds to live on-device sensor signals.
+- A run ends if 12 live flies take over.
+- Four-hit combos unlock weapon rewards.
+- 51 environments, three-star mastery, local records, and Hall of Fame.
+- Single-player campaign and local records work offline after download.
+- Optional worldwide Apple Game Center rankings require internet.
+- No ads or in-app purchases.
+
+PRIVACY
+Camera, microphone, and motion signals are processed on the device.
+Camera images and audio are not recorded or saved.
+Details: https://shutupfly.timhudson.com/privacy/
+
+ASSET GUIDE
+game-logo-cutout-v1.webp: official transparent logo, 800 x 784.
+hero-universe-v1.jpg: illustrated promotional key art, 1600 x 900.
+sensor-gameplay-v1.webp: gameplay screenshot, 660 x 1434.
+infestation-pressure-v1.webp: gameplay screenshot, 660 x 1434.
+la-chancla-v1.webp: gameplay screenshot, 660 x 1434.
+The key art is promotional illustration, not a gameplay screenshot.
+
+Gameplay preview (separate MP4 download, approximately 18 seconds, 14 MB):
+https://shutupfly.timhudson.com/media/gameplay-preview-fast-hook-v2.mp4
+
+Please refer to the current App Store listing for the latest availability
+and compatibility. Contact Tim Hudson for interview or asset enquiries.

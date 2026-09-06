@@ -10,6 +10,7 @@ Preserve CNAME, `.nojekyll`, the official game logo, and the App Store badge.
 - `/`: the official free iPhone arcade game, no ads or in-app purchases.
 - `/offline-iphone-game/`: what works offline, connection limits, and setup.
 - `/how-to-play/`: Fly Sense, infestation, four-hit combinations, and weapons.
+- `/press/`: verified game facts, original artwork, screenshots, and gameplay downloads.
 - `/support/` and `/privacy/`: preserve the published support/privacy routes.
 
 These pages describe the publicly released game, not a development candidate.
@@ -45,7 +46,8 @@ On September 6, 2026, App Store Connect generated the `website` campaign:
 https://apps.apple.com/app/apple-store/id6797986930?pt=127545438&ct=website&mt=8
 
 All six visible App Store links and four existing Safari Smart App Banners use
-this campaign. The provider token is Apple's public marketing identifier, not
+this campaign in the initial attribution release. The press kit adds a seventh
+visible link and a fifth banner. The provider token is Apple's public marketing identifier, not
 a credential. Keep the app's structured-data URLs canonical and untagged.
 Preserve one campaign while traffic is small, since splitting it across pages
 can leave each campaign below Apple's reporting threshold. Do not count our own
@@ -79,3 +81,19 @@ Primary guidance: [Google people-first content](https://developers.google.com/se
 [Google software-app schema](https://developers.google.com/search/docs/appearance/structured-data/software-app),
 [Apple campaign links](https://developer.apple.com/help/app-store-connect-analytics/acquisition/campaign-links/),
 and [Apple App Store search](https://developer.apple.com/app-store/search/).
+
+## Press assets and continuing growth
+
+`press/shut-up-fly-images-and-facts.zip` contains the five original images listed
+in `press/facts.txt`, plus that fact sheet. The video is linked separately to
+avoid duplicating it in the archive. Rebuild the ZIP when any included source
+changes; the site validator verifies its exact contents against those sources.
+Clearly distinguish illustrated key art from gameplay screenshots. Do not add
+private analytics, unreleased features, or invented endorsements to the kit.
+
+Tim's September 6 standing mandate authorizes daily growth work, website
+publication, asset creation, research, and analysis. The durable backlog and
+operating plan are in gitignored `_local/growth-operating-plan.md`; evidence
+remains in `_local/seo-growth-project.md`. App releases, social publication,
+and outreach are prepared for review first. Spending stays at zero until a
+budget is approved. Complete independent work while any specific review is pending.

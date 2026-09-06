@@ -1,13 +1,15 @@
 """Validate the static site as crawlers receive it, without browser JavaScript."""
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlsplit, unquote, urljoin
+from urllib.parse import urlsplit, unquote, urljoin, parse_qs
 import json
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://shutupfly.timhudson.com'
 APP = 'https://apps.apple.com/us/app/shut-up-fly/id6797986930'
+CAMPAIGN_APP = 'https://apps.apple.com/app/apple-store/id6797986930?pt=127545438&ct=website&mt=8'
+CAMPAIGN_PARAMS = {'pt': ['127545438'], 'ct': ['website'], 'mt': ['8']}
 
 
 class Page(HTMLParser):
@@ -74,6 +76,18 @@ for url, page in pages.items():
                 assert fragment in Page(target).ids, (url, 'broken anchor', value)
     for img in page.find('img'):
         assert 'alt' in img and img.get('width') and img.get('height'), (url, 'image metadata')
+    downloads = [a for a in page.find('a') if urlsplit(a.get('href', '')).hostname == 'apps.apple.com']
+    assert downloads, (url, 'missing download action')
+    for link in downloads:
+        assert link['href'] == CAMPAIGN_APP, (url, 'download campaign mismatch')
+        assert parse_qs(urlsplit(link['href']).query) == CAMPAIGN_PARAMS
+    banners = page.find('meta', name='apple-itunes-app')
+    if url != ORIGIN + '/privacy/':
+        assert len(banners) == 1, (url, 'one Smart App Banner required')
+    for banner in banners:
+        settings = dict(part.strip().split('=', 1) for part in banner['content'].split(','))
+        assert settings['app-id'] == '6797986930', (url, 'banner app mismatch')
+        assert parse_qs(settings['affiliate-data']) == CAMPAIGN_PARAMS, (url, 'banner campaign mismatch')
 
 assert len(titles) == len(set(titles)), 'Page titles must be unique'
 home = pages[ORIGIN + '/']
@@ -85,7 +99,7 @@ assert 'aggregateRating' not in game and 'review' not in game, 'Do not invent or
 for route in ('/offline-iphone-game/', '/how-to-play/'):
     assert home.find('a', href=route), ('unlinked guide', route)
     guide = pages[ORIGIN + route]
-    assert guide.find('a', href=APP), ('missing download action', route)
+    assert guide.find('a', href=CAMPAIGN_APP), ('missing download action', route)
     graph = guide.schemas[0]['@graph']
     assert graph[0]['url'] == ORIGIN + route
     assert graph[1]['itemListElement'][-1]['item'] == ORIGIN + route

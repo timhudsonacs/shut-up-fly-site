@@ -39,6 +39,26 @@ belong in gitignored `_local/`, never in the public site. The initial research
 is `_local/seo-growth-project.md`. Search Console measurements and Apple
 first-time downloads are separate: a website click is not a confirmed install.
 
+## Website download attribution
+
+On September 6, 2026, App Store Connect generated the `website` campaign:
+https://apps.apple.com/app/apple-store/id6797986930?pt=127545438&ct=website&mt=8
+
+All six visible App Store links and four existing Safari Smart App Banners use
+this campaign. The provider token is Apple's public marketing identifier, not
+a credential. Keep the app's structured-data URLs canonical and untagged.
+Preserve one campaign while traffic is small, since splitting it across pages
+can leave each campaign below Apple's reporting threshold. Do not count our own
+link validation as customer demand.
+
+Apple attributes first-time downloads within 24 hours of a campaign interaction.
+Reporting requires at least five individual first-time users and at least 24
+hours after launch; individual metrics also have minimum reporting thresholds.
+An absent campaign row does not prove zero installs. Inspect the Campaigns view
+in App Store Connect alongside Google Search Console, and keep private exports
+in `_local/`. See [Apple campaign guidance](https://developer.apple.com/help/app-store-connect-analytics/acquisition/campaign-links/)
+and Apple's [Smart App Banner markup example](https://developer.apple.com/videos/play/wwdc2020/10663/?time=2033).
+
 ## Evidence used for the initial search work
 
 Research date: September 6, 2026. Google autocomplete, English with US country

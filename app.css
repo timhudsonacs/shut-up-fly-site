@@ -12,6 +12,42 @@
   --green: #48dc76;
 }
 
+/* Search visitors get the same readable, illustrated game experience. */
+.skip-link { position: fixed; left: 16px; top: -100px; z-index: 100; padding: 12px 20px; color: #070707; background: #ffd22e; }
+.skip-link:focus { top: 16px; }
+.player-guide, .game-faq { width: min(100% - 36px, 1180px); margin: 0 auto; padding: clamp(48px, 7vw, 88px) 0; }
+.player-guide { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.player-guide h2, .game-faq h2 { margin: 0 0 24px; font-size: clamp(2rem, 4vw, 3.4rem); letter-spacing: -.035em; }
+.player-guide p, .game-faq p { color: var(--muted); max-width: 72ch; }
+.guide-links { display: grid; gap: 20px; }
+.guide-links a { display: block; padding: 24px; border: 1px solid var(--line); border-radius: 18px; text-decoration: none; background: rgba(0,0,0,.18); }
+.guide-links a:hover { border-color: var(--orange); }
+.guide-links strong, .guide-links span { display: block; }
+.guide-links strong { font-size: 1.2rem; color: var(--yellow); }
+.guide-links span { margin-top: 8px; color: var(--muted); }
+.game-faq { max-width: 900px; }
+.game-faq details { border-bottom: 1px solid var(--line); padding-block: 18px; }
+.game-faq summary { cursor: pointer; font-size: 1.125rem; font-weight: 750; padding: 8px 0; }
+summary:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
+.guide-page .app-nav { flex-wrap: wrap; margin-bottom: 32px; }
+.guide-page .app-links { flex-wrap: wrap; }
+.guide-page h1 { max-width: 17ch; font-size: clamp(2.7rem, 7vw, 4.5rem); }
+.guide-page .guide-intro { padding-block: 22px; }
+.guide-page .guide-meta { color: var(--muted); font-size: .875rem; }
+.guide-page .guide-shot { margin: 32px 0; }
+.guide-page .guide-shot img { display: block; max-width: 100%; height: auto; border-radius: 16px; }
+.guide-page .guide-shot figcaption { margin-top: 12px; color: var(--muted); }
+.guide-page .guide-shot.portrait { max-width: 300px; margin-inline: auto; }
+.guide-page .feature-table { width: 100%; border-collapse: collapse; margin-block: 24px; }
+.feature-table th, .feature-table td { text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); padding: 14px 8px; }
+.feature-table td { color: var(--muted); }
+.guide-page .app-footer { flex-wrap: wrap; gap: 16px; }
+.guide-page .app-footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.guide-page .app-card a, .game-faq a { text-underline-offset: 3px; }
+@media (max-width: 760px) {
+  .player-guide { grid-template-columns: 1fr; gap: 24px; }
+}
+
 * { box-sizing: border-box; }
 
 html { background: var(--bg); }

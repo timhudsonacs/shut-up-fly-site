@@ -1,46 +1,61 @@
 SHUT UP FLY
-Official game facts, checked September 6, 2026
+Official game facts, checked October 4, 2026
 
-Developer: Tim Hudson
+Developer: Tim Hudson / THUD Studio
+App Store seller: Tim Hudson
 Website: https://shutupfly.timhudson.com/
+Studio: https://shutupfly.timhudson.com/studio/
+Reviewer guide: https://shutupfly.timhudson.com/review/
 Press kit: https://shutupfly.timhudson.com/press/
 App Store: https://apps.apple.com/app/apple-store/id6797986930?pt=127545438&ct=website&mt=8
 Contact: timhudsonacs@gmail.com
 Platform: iPhone, iOS 18 or later
-Current public version: 1.2
-Price: Free, with no ads or in-app purchases
+Current public version: 1.11 (verified October 4, 2026)
+Price: Free, with optional rewarded ads and no in-app purchases
 Genre: Single-player action arcade
 
 SHORT DESCRIPTION
-Shut Up Fly turns your iPhone into a fly-swatting arcade. Stay still, let a fly
-land, then tap before it escapes. Real-world movement and sudden sound changes
-affect the hunt. Stop maggots hatching, complete four-hit combo keys, and earn
-weapons including La Chancla across 51 increasingly difficult environments.
+An island full of flies. An Armoury full of bad ideas. Shut Up Fly turns your
+iPhone into a tactile fly-squishing arcade. Clear flies and maggots against a
+30-second campaign clock, earn weapons with four-hit combos, and restore
+the island across 51 levels.
 
 FEATURES
-- Fly Sense responds to live on-device sensor signals.
-- A run ends if 12 live flies take over.
-- Four-hit combos unlock weapon rewards.
-- 51 environments, three-star mastery, local records, and Hall of Fame.
+- Fly Sense responds to live on-device movement and approach signals.
+- Clear every fly and maggot before the campaign timer expires.
+- Four-hit combos earn weapon rewards.
+- 51 campaign levels and island regions to restore.
+- Separate Regular, Medium, and Neon progression and Game Center boards.
+- Three-star results, local records, and Hall of Fame.
+- Flyduko puzzles award weapons for newly solved puzzles.
+- Optional rewarded ads earn a selected weapon deployment.
 - Single-player campaign and local records work offline after download.
-- Optional worldwide Apple Game Center rankings require internet.
-- No ads or in-app purchases.
+- Ads and optional worldwide Apple Game Center rankings require internet.
+- No developer account or in-app purchases.
 
 PRIVACY
-Camera, microphone, and motion signals are processed on the device.
-Camera images and audio are not recorded or saved.
+Camera and motion inputs are processed on the device for fly reactions.
+Camera images are not recorded or saved. The game does not use the microphone.
+Optional Google AdMob ads involve advertising and diagnostic data processing.
 Details: https://shutupfly.timhudson.com/privacy/
+
+RELEASE SCOPE
+This fact sheet describes public version 1.11. The reviewer guide separately
+identifies features in the update being prepared. Do not describe upcoming
+reward limits or interface changes as already available in version 1.11.
 
 ASSET GUIDE
 game-logo-cutout-v1.webp: official transparent logo, 800 x 784.
 hero-universe-v1.jpg: illustrated promotional key art, 1600 x 900.
-sensor-gameplay-v1.webp: gameplay screenshot, 660 x 1434.
-infestation-pressure-v1.webp: gameplay screenshot, 660 x 1434.
-la-chancla-v1.webp: gameplay screenshot, 660 x 1434.
+sensor-gameplay-v1.webp: earlier-version gameplay screenshot, 660 x 1434.
+infestation-pressure-v1.webp: earlier-version gameplay screenshot, 660 x 1434.
+la-chancla-v1.webp: earlier-version gameplay screenshot, 660 x 1434.
 The key art is promotional illustration, not a gameplay screenshot.
+The screenshots and video show an earlier interface and are not evidence
+of the upcoming update. Contact the studio for current capture enquiries.
 
-Gameplay preview (separate MP4 download, approximately 18 seconds, 14 MB):
+Earlier-version gameplay preview (separate MP4, approximately 18 seconds):
 https://shutupfly.timhudson.com/media/gameplay-preview-fast-hook-v2.mp4
 
-Please refer to the current App Store listing for the latest availability
-and compatibility. Contact Tim Hudson for interview or asset enquiries.
+Refer to the App Store listing for current availability and compatibility.
+Contact Tim Hudson for interview or asset enquiries.

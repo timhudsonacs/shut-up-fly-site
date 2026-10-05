@@ -898,3 +898,5 @@ h1 {
   .watch-action:hover { transform: translateX(3px); }
   .hook-card:hover { transform: translateY(-5px); box-shadow: 0 26px 80px rgba(0, 0, 0, 0.48); }
 }
+.media-context { max-width: 70ch; margin: 20px auto; padding-inline: 20px; font-size: .85rem; line-height: 1.6; }
+.site-review-link { grid-column: 1 / -1; margin: 0; font-size: .85rem; }

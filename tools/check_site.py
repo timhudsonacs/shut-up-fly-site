@@ -53,7 +53,7 @@ def path_for(url):
 
 
 urls = [node.text for node in ET.parse(ROOT / 'sitemap.xml').findall('.//{*}loc')]
-assert len(urls) == len(set(urls)) == 6, 'Sitemap should list six unique canonical pages'
+assert len(urls) == len(set(urls)) == 8, 'Sitemap should list eight unique canonical pages'
 pages = {url: Page(path_for(url)) for url in urls}
 titles = []
 for url, page in pages.items():

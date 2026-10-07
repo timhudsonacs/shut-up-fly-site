@@ -868,7 +868,7 @@ h1 {
 @media (max-width: 620px) {
   .game-logo { width: 112px; height: 96px; }
   .marketing-nav { min-height: 70px; align-items: center; }
-  .marketing-nav .app-links { width: auto; }
+  .marketing-nav .app-links { width: auto; min-width: 0; flex-wrap: wrap; justify-content: flex-end; }
   .marketing-nav .app-links a:first-child { display: none; }
   .marketing-nav .app-links a { min-height: 40px; padding-inline: 11px; }
   .game-hero { min-height: 720px; }

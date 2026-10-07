@@ -108,11 +108,13 @@ for route in ('/offline-iphone-game/', '/how-to-play/', '/press/'):
 
 with ZipFile(ROOT / 'press/shut-up-fly-images-and-facts.zip') as bundle:
     assert bundle.testzip() is None, 'Corrupt press download'
-    expected = {'game-logo-cutout-v1.webp', 'hero-universe-v1.jpg', 'sensor-gameplay-v1.webp',
-                'infestation-pressure-v1.webp', 'la-chancla-v1.webp', 'facts.txt'}
-    assert set(bundle.namelist()) == expected, 'Unexpected or missing press asset'
-    for name in expected:
-        source = ROOT / ('press' if name == 'facts.txt' else 'media') / name
+    expected = {f'assets/{p.name}': p for p in (ROOT / 'media/press-1.12').glob('*.png')}
+    assert len(expected) == 6, 'Expected six version 1.12 screenshots'
+    expected.update({f'assets/{name}': ROOT / 'media' / name for name in
+                     ('game-logo-cutout-v1.webp', 'hero-universe-v1.jpg', 'thud-studio.png')})
+    expected['facts.txt'] = ROOT / 'press/facts.txt'
+    assert set(bundle.namelist()) == set(expected), 'Unexpected or missing press asset'
+    for name, source in expected.items():
         assert bundle.read(name) == source.read_bytes(), ('Stale press asset', name)
 
 robots = (ROOT / 'robots.txt').read_text()

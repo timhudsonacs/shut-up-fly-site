@@ -1,61 +1,38 @@
-SHUT UP FLY
-Official game facts, checked October 4, 2026
+SHUT UP FLY — PRESS FACTS
+Updated October 7, 2026 for public version 1.12.
+Release status: public US and GB lookup returned 1.12 on October 7, 2026. Version 1.13 (58) is awaiting review and is not represented by this screenshot set.
 
 Developer: Tim Hudson / THUD Studio
-App Store seller: Tim Hudson
-Website: https://shutupfly.timhudson.com/
-Studio: https://shutupfly.timhudson.com/studio/
-Reviewer guide: https://shutupfly.timhudson.com/review/
-Press kit: https://shutupfly.timhudson.com/press/
-App Store: https://apps.apple.com/app/apple-store/id6797986930?pt=127545438&ct=website&mt=8
-Contact: timhudsonacs@gmail.com
 Platform: iPhone, iOS 18 or later
-Current public version: 1.11 (verified October 4, 2026)
-Price: Free, with optional rewarded ads and no in-app purchases
-Genre: Single-player action arcade
+Price: Free, optional rewarded ads, no in-app purchases
+Genre: Single-player action arcade with Flyduko logic puzzles
+Campaign: 51 levels; ordinary campaign rounds last 30 seconds
+Difficulty: Regular, Medium and Neon, with separate progress
+Collection: 13 weapons and rewards, including Fly of Valour
+Puzzles: 300 Flyduko puzzles; one fly per row, column and region, none touching even diagonally
+Offline: Campaign and local records after download
+Online: Optional rewarded ads and Game Center rankings
 
-SHORT DESCRIPTION
-An island full of flies. An Armoury full of bad ideas. Shut Up Fly turns your
-iPhone into a tactile fly-squishing arcade. Clear flies and maggots against a
-30-second campaign clock, earn weapons with four-hit combos, and restore
-the island across 51 levels.
+The Armoury banks rewards from accurate four-hit fly/maggot recipes. Opening it pauses the hunt. Each deployment uses its own weapon rules: for example, three Salt Shotgun shots or unlimited Newspaper swats for the level.
+Flyduko newly solved puzzles earn prize-machine weapons to bring back to the hunt. Replaying a previously rewarded puzzle does not earn another prize.
+Watch / Win Weapons is optional. One completed eligible rewarded ad earns one deployment. The 1.12 Supply Shack holds up to 99 ad-earned deployments of each of 11 eligible weapons. This is a stock cap, not a daily allowance. Frog and Fly of Valour are excluded from ad choices. Ad availability varies.
 
-FEATURES
-- Fly Sense responds to live on-device movement and approach signals.
-- Clear every fly and maggot before the campaign timer expires.
-- Four-hit combos earn weapon rewards.
-- 51 campaign levels and island regions to restore.
-- Separate Regular, Medium, and Neon progression and Game Center boards.
-- Three-star results, local records, and Hall of Fame.
-- Flyduko puzzles award weapons for newly solved puzzles.
-- Optional rewarded ads earn a selected weapon deployment.
-- Single-player campaign and local records work offline after download.
-- Ads and optional worldwide Apple Game Center rankings require internet.
-- No developer account or in-app purchases.
+Version 1.12 update: refreshed Supply Shack, clearer island mission and Flyduko weapon-return feedback, smoother celebrations, more responsive first Newspaper and Electric Racquet strikes. The 51 levels and 300 puzzles are existing features, not all new in this update.
 
-PRIVACY
-Camera and motion inputs are processed on the device for fly reactions.
-Camera images are not recorded or saved. The game does not use the microphone.
-Optional Google AdMob ads involve advertising and diagnostic data processing.
-Details: https://shutupfly.timhudson.com/privacy/
+Camera and motion power local Fly Sense reactions. Camera images are not recorded, saved or sent to the developer. No microphone is used. Optional ad services process data; consult the full privacy policy.
 
-RELEASE SCOPE
-This fact sheet describes public version 1.11. The reviewer guide separately
-identifies features in the update being prepared. Do not describe upcoming
-reward limits or interface changes as already available in version 1.11.
+App: https://apps.apple.com/us/app/shut-up-fly/id6797986930
+Game: https://shutupfly.timhudson.com/
+Press: https://shutupfly.timhudson.com/press/
+Studio: https://shutupfly.timhudson.com/studio/
+Privacy: https://shutupfly.timhudson.com/privacy/
+Contact: Tim Hudson — timhudsonacs@gmail.com
 
-ASSET GUIDE
-game-logo-cutout-v1.webp: official transparent logo, 800 x 784.
-hero-universe-v1.jpg: illustrated promotional key art, 1600 x 900.
-sensor-gameplay-v1.webp: earlier-version gameplay screenshot, 660 x 1434.
-infestation-pressure-v1.webp: earlier-version gameplay screenshot, 660 x 1434.
-la-chancla-v1.webp: earlier-version gameplay screenshot, 660 x 1434.
-The key art is promotional illustration, not a gameplay screenshot.
-The screenshots and video show an earlier interface and are not evidence
-of the upcoming update. Contact the studio for current capture enquiries.
+ASSET NOTES
+Six PNG screenshots: 1320 x 2868, unchanged from the 1.12 submission capture set. Captured from the app using staged progress and inventory. These are simulator captures, not proof of live ad delivery or App Store approval.
+hero-universe-v1.jpg: illustrated promotional artwork, 1600 x 900; not gameplay.
+game-logo-cutout-v1.webp: official game logo, 800 x 784.
+thud-studio.png: studio logo, 1774 x 887.
+Credit: Shut Up Fly / THUD Studio. For licensing or other asset questions, contact Tim.
 
-Earlier-version gameplay preview (separate MP4, approximately 18 seconds):
-https://shutupfly.timhudson.com/media/gameplay-preview-fast-hook-v2.mp4
-
-Refer to the App Store listing for current availability and compatibility.
-Contact Tim Hudson for interview or asset enquiries.
+Story: Every packed fly is being sent on an expensive worldwide vacation. The flies get the island in the end.

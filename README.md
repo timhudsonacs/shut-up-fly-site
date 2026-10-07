@@ -7,21 +7,21 @@ Preserve CNAME, `.nojekyll`, the official game logo, and the App Store badge.
 
 ## Search and download intent
 
-- `/`: the official free iPhone arcade game, no ads or in-app purchases.
+- `/`: the official free iPhone arcade game, optional rewarded ads and no in-app purchases.
 - `/offline-iphone-game/`: what works offline, connection limits, and setup.
 - `/how-to-play/`: Fly Sense, infestation, four-hit combinations, and weapons.
 - `/press/`: verified game facts, original artwork, screenshots, and gameplay downloads.
 - `/support/` and `/privacy/`: preserve the published support/privacy routes.
 
 These pages describe the publicly released game, not a development candidate.
-The September 6, 2026 US Apple lookup confirms version 1.2, free pricing,
+The October 7, 2026 US and GB Apple lookups confirm version 1.12, free pricing,
 iOS 18 minimum, and the official website. Release notes and review materials
 support on-device single-player play; online Game Center rankings are optional.
 Never describe development-only bosses or replay features as released.
 
 Keep one canonical per page and update `sitemap.xml` when a substantive public
 page changes. Preserve the Google verification tag on the homepage.
-Use explicit iPhone/free/no-ads language where helpful, not keyword repetition.
+Use accurate iPhone/free/optional rewarded ads language where helpful, not keyword repetition.
 No duplicate keyword landing pages, hidden links, purchased links, fabricated
 reviews, or self-awarded “best game” claims. There are no analytics scripts or
 third-party dependencies. The app schema intentionally has no frozen rating;
@@ -84,7 +84,7 @@ and [Apple App Store search](https://developer.apple.com/app-store/search/).
 
 ## Press assets and continuing growth
 
-`press/shut-up-fly-images-and-facts.zip` contains the five original images listed
+`press/shut-up-fly-images-and-facts.zip` contains the nine images listed
 in `press/facts.txt`, plus that fact sheet. The video is linked separately to
 avoid duplicating it in the archive. Rebuild the ZIP when any included source
 changes; the site validator verifies its exact contents against those sources.

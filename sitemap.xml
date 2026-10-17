@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://shutupfly.timhudson.com/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shutupfly.timhudson.com/</loc><lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://shutupfly.timhudson.com/offline-iphone-game/</loc>
     <lastmod>2026-10-04</lastmod>
   </url>
   <url>
-    <loc>https://shutupfly.timhudson.com/how-to-play/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <loc>https://shutupfly.timhudson.com/how-to-play/</loc><lastmod>2026-10-16</lastmod>
   </url>
   <url>
-    <loc>https://shutupfly.timhudson.com/support/</loc>
+    <loc>https://shutupfly.timhudson.com/support/</loc><lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://shutupfly.timhudson.com/privacy/</loc>
     <lastmod>2026-10-04</lastmod>
   </url>
   <url>
-    <loc>https://shutupfly.timhudson.com/press/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shutupfly.timhudson.com/press/</loc><lastmod>2026-10-16</lastmod>
   </url>
-  <url><loc>https://shutupfly.timhudson.com/studio/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://shutupfly.timhudson.com/review/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://shutupfly.timhudson.com/studio/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://shutupfly.timhudson.com/review/</loc><lastmod>2026-10-16</lastmod></url>
 </urlset>

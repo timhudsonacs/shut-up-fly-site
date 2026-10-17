@@ -1,6 +1,6 @@
 SHUT UP FLY — PRESS FACTS
-Updated October 7, 2026 for public version 1.12.
-Release status: public US and GB lookup returned 1.12 on October 7, 2026. Version 1.13 (58) is awaiting review and is not represented by this screenshot set.
+Updated October 16, 2026 for public version 1.15.
+Release status: Apple’s US and GB lookups confirm version 1.15, released October 16, 2026. The screenshot set remains labelled version 1.12.
 
 Developer: Tim Hudson / THUD Studio
 Platform: iPhone, iOS 18 or later
@@ -15,9 +15,9 @@ Online: Optional rewarded ads and Game Center rankings
 
 The Armoury banks rewards from accurate four-hit fly/maggot recipes. Opening it pauses the hunt. Each deployment uses its own weapon rules: for example, three Salt Shotgun shots or unlimited Newspaper swats for the level.
 Flyduko newly solved puzzles earn prize-machine weapons to bring back to the hunt. Replaying a previously rewarded puzzle does not earn another prize.
-Watch / Win Weapons is optional. One completed eligible rewarded ad earns one deployment. The 1.12 Supply Shack holds up to 99 ad-earned deployments of each of 11 eligible weapons. This is a stock cap, not a daily allowance. Frog and Fly of Valour are excluded from ad choices. Ad availability varies.
+Watch / Win Weapons is optional. One completed eligible rewarded ad earns one deployment. The Junkyard Picture Show lets you bank up to 99 ad-earned deployments per eligible weapon. This is a stock cap, not a daily allowance. Frog and Fly of Valour are excluded from ad choices. Ad availability varies.
 
-Version 1.12 update: refreshed Supply Shack, clearer island mission and Flyduko weapon-return feedback, smoother celebrations, more responsive first Newspaper and Electric Racquet strikes. The 51 levels and 300 puzzles are existing features, not all new in this update.
+Version 1.15 update: quicker introduction, clearer 30-second guidance and a final-countdown stopwatch, new maggot splats, livelier Flyduko prize reveals, improved weapon guidance, unused weapons carrying into the next game, and sound, animation, sharing, and celebration-pause fixes. The 51 levels and 300 puzzles are existing features.
 
 Camera and motion power local Fly Sense reactions. Camera images are not recorded, saved or sent to the developer. No microphone is used. Optional ad services process data; consult the full privacy policy.
 
@@ -26,9 +26,16 @@ Game: https://shutupfly.timhudson.com/
 Press: https://shutupfly.timhudson.com/press/
 Studio: https://shutupfly.timhudson.com/studio/
 Privacy: https://shutupfly.timhudson.com/privacy/
+TikTok: https://www.tiktok.com/@shutupfly
+Instagram: https://www.instagram.com/playshutupfly/
 Contact: Tim Hudson — timhudsonacs@gmail.com
 
+PRODUCTION
+Generative AI was used extensively in development and promotion, including code, artwork, audio, and the promo video.
+
 ASSET NOTES
+Approved 20-second promo (web copy): https://shutupfly.timhudson.com/media/shut-up-fly-promo-20s.mp4
+Promo includes interface screens from before version 1.15; not a fresh 1.15 capture.
 Six PNG screenshots: 1320 x 2868, unchanged from the 1.12 submission capture set. Captured from the app using staged progress and inventory. These are simulator captures, not proof of live ad delivery or App Store approval.
 hero-universe-v1.jpg: illustrated promotional artwork, 1600 x 900; not gameplay.
 game-logo-cutout-v1.webp: official game logo, 800 x 784.

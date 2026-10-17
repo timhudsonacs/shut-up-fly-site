@@ -10,11 +10,11 @@ Preserve CNAME, `.nojekyll`, the official game logo, and the App Store badge.
 - `/`: the official free iPhone arcade game, optional rewarded ads and no in-app purchases.
 - `/offline-iphone-game/`: what works offline, connection limits, and setup.
 - `/how-to-play/`: Fly Sense, infestation, four-hit combinations, and weapons.
-- `/press/`: verified game facts, original artwork, screenshots, and gameplay downloads.
+- `/press/`: verified game facts, promotional artwork, labelled screenshots, and promo downloads.
 - `/support/` and `/privacy/`: preserve the published support/privacy routes.
 
 These pages describe the publicly released game, not a development candidate.
-The October 7, 2026 US and GB Apple lookups confirm version 1.12, free pricing,
+The October 16, 2026 cache-busted US and GB Apple lookups confirm version 1.15, free pricing,
 iOS 18 minimum, and the official website. Release notes and review materials
 support on-device single-player play; online Game Center rankings are optional.
 Never describe development-only bosses or replay features as released.

@@ -905,7 +905,7 @@ h1 {
 .flyduko-section { scroll-margin-top: 24px; border-bottom: 1px solid rgba(255, 207, 22, .3); background: #101c20; }
 .flyduko-section h2 { font-size: clamp(2.7rem, 6vw, 5rem); }
 .flyduko-section .preview-shell video { aspect-ratio: 9 / 16; height: auto; }
-.flyduko-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; margin-top: 28px; }
-.flyduko-actions .store-text-action { margin: 0; text-align: center; }
+.flyduko-actions, .play-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; margin-top: 28px; }
+.flyduko-actions .store-text-action, .play-actions .store-text-action { margin: 0; text-align: center; }
 .flyduko-section .flyduko-details { margin-top: 24px; font-size: .9rem; }
 .flyduko-section .flyduko-disclosure { margin-top: 16px; font-size: .8rem; color: rgba(255, 245, 220, .65); }

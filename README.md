@@ -14,7 +14,7 @@ Preserve CNAME, `.nojekyll`, the official game logo, and the App Store badge.
 - `/support/` and `/privacy/`: preserve the published support/privacy routes.
 
 These pages describe the publicly released game, not a development candidate.
-The October 16, 2026 cache-busted US and GB Apple lookups confirm version 1.15, free pricing,
+The October 20, 2026 cache-busted US and GB Apple lookups confirm version 1.16, free pricing,
 iOS 18 minimum, and the official website. Release notes and review materials
 support on-device single-player play; online Game Center rankings are optional.
 Never describe development-only bosses or replay features as released.

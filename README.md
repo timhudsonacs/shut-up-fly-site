@@ -113,3 +113,10 @@ Its Organization ID is `https://shutupfly.timhudson.com/studio/#organization`.
 The studio collection and homepage game metadata share that identity. Keep
 structured facts consistent with visible copy; upcoming games must remain
 labelled upcoming. Do not invent aliases, ratings, awards, or external profiles.
+
+The studio portfolio includes Shut Up Fly, Bill Sergeant, and Whoopdy Doo.
+Whoopdy Doo is an upcoming free mountain-bike game for iPhone and iPad
+(iOS/iPadOS 17+), submitted for Apple review on October 26, 2026. Its game,
+support and privacy pages are at https://timhudsonacs.github.io/whoopdy-doo-site/.
+The mountain illustration and title sign are promotional artwork, not gameplay
+screenshots. Preserve the coming-soon label until public release is verified.

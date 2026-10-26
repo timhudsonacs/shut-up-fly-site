@@ -5,9 +5,17 @@ GitHub Pages serves this repository's `main` branch at `/`. This is a static
 HTML/CSS site; the separate Next/Vinext marketing prototype is not production.
 Preserve CNAME, `.nojekyll`, the official game logo, and the App Store badge.
 
+## Current availability
+
+October 25, 2026: Apple US lookup confirms version 1.19, free pricing,
+iOS 18 minimum and `iosUniversal` support. Homepage download labels and
+the gameplay/support guides now explicitly include iPad and iPadOS 18+.
+Older dated verification notes below are historical. Preserve existing
+App Store campaign links and the offline guide URL.
+
 ## Search and download intent
 
-- `/`: the official free iPhone arcade game, optional rewarded ads and no in-app purchases.
+- `/`: the official free iPhone and iPad arcade game, optional rewarded ads and no in-app purchases.
 - `/offline-iphone-game/`: what works offline, connection limits, and setup.
 - `/how-to-play/`: Fly Sense, infestation, four-hit combinations, and weapons.
 - `/press/`: verified game facts, promotional artwork, labelled screenshots, and promo downloads.

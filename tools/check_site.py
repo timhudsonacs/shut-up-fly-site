@@ -97,6 +97,16 @@ assert set(game['@type']) == {'VideoGame', 'MobileApplication'}
 assert game['offers']['price'] == '0' and game['operatingSystem'] == 'iOS 18.0 or later'
 assert game['downloadUrl'] == APP
 assert 'aggregateRating' not in game and 'review' not in game, 'Do not invent or freeze ratings'
+studio = pages[ORIGIN + '/studio/']
+studio_graph = studio.schemas[0]['@graph']
+organization = next(node for node in studio_graph if node['@type'] == 'Organization')
+assert organization['name'] == 'THUD Studio'
+assert organization['url'] == ORIGIN + '/studio/'
+assert game['creator']['@id'] == organization['@id'], 'Game must identify the canonical studio'
+collection = next(node for node in studio_graph if node['@type'] == 'CollectionPage')
+assert collection['about']['@id'] == organization['@id']
+assert collection['mainEntity']['itemListElement'][0]['item']['@id'] == game['@id']
+assert 'upcoming' in collection['mainEntity']['itemListElement'][1]['item']['description']
 for route in ('/offline-iphone-game/', '/how-to-play/', '/press/'):
     assert home.find('a', href=route), ('unlinked guide', route)
     guide = pages[ORIGIN + route]

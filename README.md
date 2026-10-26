@@ -105,3 +105,11 @@ operating plan are in gitignored `_local/growth-operating-plan.md`; evidence
 remains in `_local/seo-growth-project.md`. App releases, social publication,
 and outreach are prepared for review first. Spending stays at zero until a
 budget is approved. Complete independent work while any specific review is pending.
+
+## Studio discovery identity
+
+The canonical studio home is `/studio/`, with the public name THUD Studio.
+Its Organization ID is `https://shutupfly.timhudson.com/studio/#organization`.
+The studio collection and homepage game metadata share that identity. Keep
+structured facts consistent with visible copy; upcoming games must remain
+labelled upcoming. Do not invent aliases, ratings, awards, or external profiles.

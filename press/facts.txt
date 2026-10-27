@@ -2,7 +2,7 @@ SHUT UP FLY: PRESS FACTS
 Updated October 20, 2026 for public version 1.16.
 Release status: Apple’s US and GB lookups confirm version 1.16, released October 20, 2026. The screenshot set remains labelled version 1.12.
 
-Developer: Tim Hudson / THUD Studio
+Developer: Tim Hudson / MUNTED Studio
 Platform: iPhone, iOS 18 or later
 Price: Free, optional rewarded ads, no in-app purchases
 Genre: Single-player action arcade with Flyduko logic puzzles
@@ -39,7 +39,9 @@ Promo includes interface screens from before version 1.16; not a fresh 1.16 capt
 Six PNG screenshots: 1320 x 2868, unchanged from the 1.12 submission capture set. Captured from the app using staged progress and inventory. These are simulator captures, not proof of live ad delivery or App Store approval.
 hero-universe-v1.jpg: illustrated promotional artwork, 1600 x 900; not gameplay.
 game-logo-cutout-v1.webp: official game logo, 800 x 784.
-thud-studio.png: studio logo, 1774 x 887.
-Credit: Shut Up Fly / THUD Studio. For licensing or other asset questions, contact Tim.
+munted-studio.png: MUNTED studio artwork, 1280 x 720.
+munted-splash-animated.mp4: silent MUNTED studio splash animation, 1920 x 1080, 4.3 seconds.
+Studio branding updated October 27, 2026; game-release and screenshot facts above retain their stated dates.
+Credit: Shut Up Fly / MUNTED Studio. For licensing or other asset questions, contact Tim.
 
 Story: Every packed fly is being sent on an expensive worldwide vacation. The flies get the island in the end.

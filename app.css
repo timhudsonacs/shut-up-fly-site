@@ -369,6 +369,7 @@ h1 {
 
   .app-links { width: auto; }
   .app-links a { flex: 1; justify-content: center; }
+  .utility-page .app-links { flex-wrap: wrap; justify-content: flex-end; min-width: 0; }
   .utility-page .app-links a:first-child { display: none; }
   .utility-hero {
     min-height: 560px;

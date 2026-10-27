@@ -108,7 +108,7 @@ budget is approved. Complete independent work while any specific review is pendi
 
 ## Studio discovery identity
 
-The canonical studio home is `/studio/`, with the public name THUD Studio.
+The canonical studio home is `/studio/`, with the public name MUNTED Studio.
 Its Organization ID is `https://shutupfly.timhudson.com/studio/#organization`.
 The studio collection and homepage game metadata share that identity. Keep
 structured facts consistent with visible copy; upcoming games must remain
@@ -120,3 +120,17 @@ Whoopdy Doo is an upcoming free mountain-bike game for iPhone and iPad
 support and privacy pages are at https://timhudsonacs.github.io/whoopdy-doo-site/.
 The mountain illustration and title sign are promotional artwork, not gameplay
 screenshots. Preserve the coming-soon label until public release is verified.
+
+## MUNTED brand assets
+
+Studio branding changed to MUNTED on October 27, 2026. Use
+`media/munted-studio.png` (the supplied 1280 × 720 artwork) and
+`media/munted-splash-animated.mp4` (the supplied silent 4.3-second 1080p animation).
+The studio hero plays once, supports replay, and shows the still artwork when
+reduced motion is preferred or playback is unavailable. Navigation crops the
+original artwork in CSS to show only the wordmark. The press bundle contains
+the new studio artwork; the animation is a separate download.
+
+`media/munted-social.png` is a clean still exported at 2.7 seconds from the supplied
+animation for link previews. The original supplied artwork and animation are
+otherwise copied without changing their pixels or encoding.

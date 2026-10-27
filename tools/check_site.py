@@ -100,7 +100,7 @@ assert 'aggregateRating' not in game and 'review' not in game, 'Do not invent or
 studio = pages[ORIGIN + '/studio/']
 studio_graph = studio.schemas[0]['@graph']
 organization = next(node for node in studio_graph if node['@type'] == 'Organization')
-assert organization['name'] == 'THUD Studio'
+assert organization['name'] == 'MUNTED Studio'
 assert organization['url'] == ORIGIN + '/studio/'
 assert game['creator']['@id'] == organization['@id'], 'Game must identify the canonical studio'
 collection = next(node for node in studio_graph if node['@type'] == 'CollectionPage')
@@ -121,7 +121,7 @@ with ZipFile(ROOT / 'press/shut-up-fly-images-and-facts.zip') as bundle:
     expected = {f'assets/{p.name}': p for p in (ROOT / 'media/press-1.12').glob('*.png')}
     assert len(expected) == 6, 'Expected six version 1.12 screenshots'
     expected.update({f'assets/{name}': ROOT / 'media' / name for name in
-                     ('game-logo-cutout-v1.webp', 'hero-universe-v1.jpg', 'thud-studio.png')})
+                     ('game-logo-cutout-v1.webp', 'hero-universe-v1.jpg', 'munted-studio.png')})
     expected['facts.txt'] = ROOT / 'press/facts.txt'
     assert set(bundle.namelist()) == set(expected), 'Unexpected or missing press asset'
     for name, source in expected.items():

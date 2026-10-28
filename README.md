@@ -134,3 +134,7 @@ the new studio artwork; the animation is a separate download.
 `media/munted-social.png` is a clean still exported at 2.7 seconds from the supplied
 animation for link previews. The original supplied artwork and animation are
 otherwise copied without changing their pixels or encoding.
+
+Current studio colorway: approved option 1, gold on navy. `munted-studio.png` and
+`munted-social.png` now use the approved 1672 × 941 artwork. The original silent
+4.3-second animation was recolored to match; its timing and lettering are unchanged.

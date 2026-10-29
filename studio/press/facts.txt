@@ -1,0 +1,59 @@
+MUNTED STUDIO: PRESS FACTS
+Checked October 29, 2026.
+
+Small studio. Big characters.
+
+MUNTED Studio is Tim Hudson's independent iOS game studio. Its games bring expressive artwork, memorable characters and satisfying things to do with your hands to iPhone and iPad: a ridiculous fly hunt in Shut Up Fly, a quiet counterfeit-cash puzzle in Bill Sergeant, and a ride down the mountain in Whoopdy Doo.
+
+Founder and developer: Tim Hudson
+Studio: MUNTED Studio
+App Store seller: tim hudson
+Studio: https://shutupfly.timhudson.com/studio/
+Studio press kit: https://shutupfly.timhudson.com/studio/press/
+Press and creator contact: timhudsonstudio@gmail.com
+
+THREE PUBLIC GAMES
+Free download, iPhone and iPad. Public availability, versions, pricing and OS requirements checked through Apple's US and UK lookups on October 29, 2026. Check your local App Store for device compatibility and availability.
+
+Shut Up Fly
+Hold steady. Let it land. Squish. Clear flies and maggots in 30-second arcade rounds, restore an island across 51 levels, and earn an outrageous Armoury. Flyduko adds 300 logic puzzles whose weapon prizes return to the hunt.
+Version 1.20; updated October 29, 2026.
+iOS/iPadOS 18 or later. Optional rewarded ads; no in-app purchases.
+App: https://apps.apple.com/us/app/shut-up-fly/id6797986930
+Game: https://shutupfly.timhudson.com/
+Game press kit and labelled gameplay materials: https://shutupfly.timhudson.com/press/
+
+Bill Sergeant
+Good money. Bad company. Inspect both sides of illustrated bills, put genuine notes in the money bag, and drop counterfeits in the trash. A relaxed currency puzzle with no ticking clock.
+Version 1.0.1; updated October 27, 2026.
+iOS/iPadOS 17 or later.
+App: https://apps.apple.com/us/app/bill-sergeant/id6826397921
+Game: https://bill-sergeant.timhudson.chatgpt.site/
+Independent educational game. Fictional and altered currency appears in its artwork. On-screen illustrations cannot authenticate physical money.
+
+Whoopdy Doo
+A little mountain. A lot of trouble. Pump through rollers, pick a jump line and find your balance on the way down. Ride three trails, chase medals, or discover hidden places in Free Ride.
+Version 1.0; released October 28, 2026.
+iOS/iPadOS 17 or later. Landscape play. No account required.
+App: https://apps.apple.com/us/app/whoopdy-doo/id6826962497
+Game: https://timhudsonacs.github.io/whoopdy-doo-site/
+
+STUDIO KIT CONTENTS
+facts.txt: this fact sheet.
+assets/munted-studio.png: approved gold-on-navy studio artwork, 1672 x 941.
+assets/munted-social.png: studio social preview.
+assets/game-logo-cutout-v1.webp: Shut Up Fly logo.
+assets/hero-universe-v1.jpg: Shut Up Fly illustrated key art, 1600 x 900.
+assets/bill-sergeant-logo.webp: Bill Sergeant logo.
+assets/bill-sergeant-vault.webp: Bill Sergeant illustrated key art, 1024 x 1536.
+assets/whoopdy-doo-logo.webp: Whoopdy Doo logo.
+assets/whoopdy-doo-mountain.webp: Whoopdy Doo illustrated key art, 1915 x 821.
+
+Separate animated studio opening: https://shutupfly.timhudson.com/media/munted-splash-animated.mp4?v=gold-navy
+Silent MP4, 1920 x 1080, 4.3 seconds. Not included in the ZIP.
+
+ASSET AND PRODUCTION NOTES
+The studio kit contains logos and illustrated promotional artwork, not gameplay captures. Shut Up Fly's separate game kit labels its historical screenshots and promo. Generative AI was used extensively in Shut Up Fly's development and promotion, including code, artwork, audio and video. Contact Tim for production details about another title.
+
+Credit: MUNTED Studio / Tim Hudson. For licensing, interviews or other asset questions, contact Tim.
+iPhone and iPad are trademarks of Apple Inc.

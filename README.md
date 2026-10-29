@@ -7,11 +7,11 @@ Preserve CNAME, `.nojekyll`, the official game logo, and the App Store badge.
 
 ## Current availability
 
-October 25, 2026: Apple US lookup confirms version 1.19, free pricing,
-iOS 18 minimum and `iosUniversal` support. Homepage download labels and
-the gameplay/support guides now explicitly include iPad and iPadOS 18+.
-Older dated verification notes below are historical. Preserve existing
-App Store campaign links and the offline guide URL.
+October 29, 2026: cache-busted Apple US and GB public lookups confirm all three
+studio games are available and free: Shut Up Fly 1.20 (iOS/iPadOS 18+),
+Bill Sergeant 1.0.1 and Whoopdy Doo 1.0 (both iOS/iPadOS 17+). All three
+support iPhone and iPad. Studio download buttons now link to their public
+App Store records. Older dated verification notes below are historical.
 
 ## Search and download intent
 
@@ -114,12 +114,19 @@ The studio collection and homepage game metadata share that identity. Keep
 structured facts consistent with visible copy; upcoming games must remain
 labelled upcoming. Do not invent aliases, ratings, awards, or external profiles.
 
-The studio portfolio includes Shut Up Fly, Bill Sergeant, and Whoopdy Doo.
-Whoopdy Doo is an upcoming free mountain-bike game for iPhone and iPad
-(iOS/iPadOS 17+), submitted for Apple review on October 26, 2026. Its game,
-support and privacy pages are at https://timhudsonacs.github.io/whoopdy-doo-site/.
+The public studio portfolio includes Shut Up Fly, Bill Sergeant, and Whoopdy Doo.
+All three public releases were verified on October 29, 2026. Whoopdy Doo's
+game, support and privacy pages are at https://timhudsonacs.github.io/whoopdy-doo-site/.
 The mountain illustration and title sign are promotional artwork, not gameplay
-screenshots. Preserve the coming-soon label until public release is verified.
+screenshots. Change release labels only after public-store verification.
+
+The studio-wide press kit is `/studio/press/`, distinct from Shut Up Fly's
+`/press/` game materials. Its ZIP contains the eight logos/artwork listed in
+`studio/press/facts.txt` and that fact sheet. Keep the ZIP byte-consistent with
+its sources and the date of verified public facts. Do not include private
+growth plans, metrics or outreach drafts. Bill Sergeant and Whoopdy Doo use
+their canonical App Store links; the existing Shut Up Fly website campaign
+and public provider token remain unchanged.
 
 ## MUNTED brand assets
 

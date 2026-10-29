@@ -1,9 +1,9 @@
 SHUT UP FLY: PRESS FACTS
-Updated October 20, 2026 for public version 1.16.
-Release status: Apple’s US and GB lookups confirm version 1.16, released October 20, 2026. The screenshot set remains labelled version 1.12.
+Updated October 29, 2026 for public version 1.20.
+Release status: Apple’s US and GB lookups confirm version 1.20, released October 29, 2026. The screenshot set remains labelled version 1.12.
 
 Developer: Tim Hudson / MUNTED Studio
-Platform: iPhone, iOS 18 or later
+Platform: iPhone and iPad, iOS/iPadOS 18 or later
 Price: Free, optional rewarded ads, no in-app purchases
 Genre: Single-player action arcade with Flyduko logic puzzles
 Campaign: 51 levels; ordinary campaign rounds last 30 seconds
@@ -17,7 +17,7 @@ The Armoury banks rewards from accurate four-hit fly/maggot recipes. Opening it 
 Flyduko newly solved puzzles earn prize-machine weapons to bring back to the hunt. Replaying a previously rewarded puzzle does not earn another prize.
 Watch / Win Weapons is optional. One completed eligible rewarded ad earns one deployment. The Junkyard Picture Show lets you bank up to 99 ad-earned deployments per eligible weapon. This is a stock cap, not a daily allowance. Frog and Fly of Valour are excluded from ad choices. Ad availability varies.
 
-Version 1.16 update: Speck hosts a new illustrated island arrival and clearer hands-on training. Training explains camera-powered Fly Sense, three finger squishes, and weapons. Tutorial targets and speech bubbles are easier to follow, and Flyduko opens its illustrated How to Play guide on first entry. Fixes cover re-enabling the camera from Pause and overlapping music. The 51 levels and 300 puzzles are existing features.
+Version 1.20 update: Clearer Game Center score status and improved sign-in recovery help players see when a score is waiting to upload or needs attention. The update also brings the MUNTED studio identity and a smaller app package. Existing progress and weapons carry forward. The 51 levels and 300 puzzles are existing features.
 
 Camera and motion power local Fly Sense reactions. Camera images are not recorded, saved or sent to the developer. No microphone is used. Optional ad services process data; consult the full privacy policy.
 
@@ -35,13 +35,13 @@ Generative AI was used extensively in development and promotion, including code,
 
 ASSET NOTES
 Approved 20-second promo (web copy): https://shutupfly.timhudson.com/media/shut-up-fly-promo-20s.mp4
-Promo includes interface screens from before version 1.16; not a fresh 1.16 capture.
+Promo includes interface screens from before version 1.20; not a fresh 1.20 capture.
 Six PNG screenshots: 1320 x 2868, unchanged from the 1.12 submission capture set. Captured from the app using staged progress and inventory. These are simulator captures, not proof of live ad delivery or App Store approval.
 hero-universe-v1.jpg: illustrated promotional artwork, 1600 x 900; not gameplay.
 game-logo-cutout-v1.webp: official game logo, 800 x 784.
 munted-studio.png: MUNTED gold-on-navy studio artwork, 1672 x 941.
 munted-splash-animated.mp4: silent gold-on-navy MUNTED studio splash animation, 1920 x 1080, 4.3 seconds.
-Studio branding updated October 27, 2026; game-release and screenshot facts above retain their stated dates.
+Studio branding updated October 27, 2026. Game-release facts checked October 29; historical screenshots retain their stated version.
 Credit: Shut Up Fly / MUNTED Studio. For licensing or other asset questions, contact Tim.
 
 Story: Every packed fly is being sent on an expensive worldwide vacation. The flies get the island in the end.

@@ -11,6 +11,10 @@ ORIGIN = 'https://shutupfly.timhudson.com'
 APP = 'https://apps.apple.com/us/app/shut-up-fly/id6797986930'
 CAMPAIGN_APP = 'https://apps.apple.com/app/apple-store/id6797986930?pt=127545438&ct=website&mt=8'
 CAMPAIGN_PARAMS = {'pt': ['127545438'], 'ct': ['website'], 'mt': ['8']}
+OTHER_APPS = {
+    'Bill Sergeant': 'https://apps.apple.com/us/app/bill-sergeant/id6826397921',
+    'Whoopdy Doo': 'https://apps.apple.com/us/app/whoopdy-doo/id6826962497',
+}
 
 
 class Page(HTMLParser):
@@ -53,7 +57,7 @@ def path_for(url):
 
 
 urls = [node.text for node in ET.parse(ROOT / 'sitemap.xml').findall('.//{*}loc')]
-assert len(urls) == len(set(urls)) == 8, 'Sitemap should list eight unique canonical pages'
+assert len(urls) == len(set(urls)) == 9, 'Sitemap should list nine unique canonical pages'
 pages = {url: Page(path_for(url)) for url in urls}
 titles = []
 for url, page in pages.items():
@@ -80,10 +84,13 @@ for url, page in pages.items():
     downloads = [a for a in page.find('a') if urlsplit(a.get('href', '')).hostname == 'apps.apple.com']
     assert downloads, (url, 'missing download action')
     for link in downloads:
-        assert link['href'] == CAMPAIGN_APP, (url, 'download campaign mismatch')
-        assert parse_qs(urlsplit(link['href']).query) == CAMPAIGN_PARAMS
+        if link['href'] in OTHER_APPS.values():
+            assert url in (ORIGIN + '/studio/', ORIGIN + '/studio/press/'), (url, 'unexpected portfolio download')
+        else:
+            assert link['href'] == CAMPAIGN_APP, (url, 'download campaign mismatch')
+            assert parse_qs(urlsplit(link['href']).query) == CAMPAIGN_PARAMS
     banners = page.find('meta', name='apple-itunes-app')
-    if url != ORIGIN + '/privacy/':
+    if url not in (ORIGIN + '/privacy/', ORIGIN + '/studio/press/'):
         assert len(banners) == 1, (url, 'one Smart App Banner required')
     for banner in banners:
         settings = dict(part.strip().split('=', 1) for part in banner['content'].split(','))
@@ -106,7 +113,18 @@ assert game['creator']['@id'] == organization['@id'], 'Game must identify the ca
 collection = next(node for node in studio_graph if node['@type'] == 'CollectionPage')
 assert collection['about']['@id'] == organization['@id']
 assert collection['mainEntity']['itemListElement'][0]['item']['@id'] == game['@id']
-assert 'upcoming' in collection['mainEntity']['itemListElement'][1]['item']['description']
+for entry in collection['mainEntity']['itemListElement'][1:]:
+    item = entry['item']
+    assert 'upcoming' not in item['description']
+    assert item['downloadUrl'] == OTHER_APPS[item['name']]
+    assert item['offers']['price'] == '0'
+    assert item['operatingSystem'] == 'iOS 17.0 or later'
+    assert studio.find('a', href=item['downloadUrl']), ('missing studio download', item['name'])
+studio_press = pages[ORIGIN + '/studio/press/']
+assert studio.find('a', href='/studio/press/'), 'Studio press kit must be discoverable'
+assert studio_press.schemas[0]['@graph'][0]['about']['@id'] == organization['@id']
+for app_url in (CAMPAIGN_APP, *OTHER_APPS.values()):
+    assert studio_press.find('a', href=app_url), ('missing studio press download', app_url)
 for route in ('/offline-iphone-game/', '/how-to-play/', '/press/'):
     assert home.find('a', href=route), ('unlinked guide', route)
     guide = pages[ORIGIN + route]
@@ -126,6 +144,17 @@ with ZipFile(ROOT / 'press/shut-up-fly-images-and-facts.zip') as bundle:
     assert set(bundle.namelist()) == set(expected), 'Unexpected or missing press asset'
     for name, source in expected.items():
         assert bundle.read(name) == source.read_bytes(), ('Stale press asset', name)
+
+with ZipFile(ROOT / 'studio/press/munted-press-kit.zip') as bundle:
+    assert bundle.testzip() is None, 'Corrupt studio press download'
+    expected = {f'assets/{name}': ROOT / 'media' / name for name in (
+        'munted-studio.png', 'munted-social.png', 'game-logo-cutout-v1.webp',
+        'hero-universe-v1.jpg', 'bill-sergeant-logo.webp', 'bill-sergeant-vault.webp',
+        'whoopdy-doo-logo.webp', 'whoopdy-doo-mountain.webp')}
+    expected['facts.txt'] = ROOT / 'studio/press/facts.txt'
+    assert set(bundle.namelist()) == set(expected), 'Unexpected or missing studio press asset'
+    for name, source in expected.items():
+        assert bundle.read(name) == source.read_bytes(), ('Stale studio press asset', name)
 
 robots = (ROOT / 'robots.txt').read_text()
 assert 'Disallow: /' not in robots

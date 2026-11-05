@@ -11,7 +11,7 @@
 .studio-facts dd{margin:0;overflow-wrap:anywhere}
 .press-games-section{padding:60px 0;border-bottom:1px solid var(--line)}
 .press-games-section>h2{font-size:clamp(38px,4vw,58px)}
-.press-games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:35px 0 25px}
+.press-games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:35px 0 25px}
 .press-game{border:1px solid var(--line);display:flex;flex-direction:column;border-radius:12px;overflow:hidden}
 .press-game>img{width:100%;height:230px;object-fit:cover}
 .press-game:nth-child(2)>img{object-position:50% 30%}
@@ -26,3 +26,5 @@
 .press-downloads li{margin-bottom:12px}
 @media(max-width:1000px){.press-games{grid-template-columns:1fr}.press-game{display:grid;grid-template-columns:1fr 1.5fr}.press-game>img{height:100%;min-height:260px}.press-game>div{padding:30px}}
 @media(max-width:700px){.press-hero{padding:45px 6vw}.press-hero .large-copy{font-size:22px}.studio-facts>div{grid-template-columns:1fr;gap:4px}.press-games-section{padding:40px 0}.press-game{display:flex}.press-game>img{height:220px;min-height:0}.press-game>div{padding:24px}.press-hero .studio-actions{gap:22px}}
+
+.press-game>img.nocturne-icon{object-fit:contain;background:#101d32;padding:22px}

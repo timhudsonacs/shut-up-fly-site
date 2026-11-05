@@ -63,3 +63,19 @@
 .wordmark-label{color:#d9b66b}
 .splash-replay{background:#0e1e31;color:#d9b66b;border-color:#d9b66b77}
 .splash-replay:hover{background:#1b314b}
+
+/* Four released MUNTED games and visible studio identity. */
+.studio-page .studio-hero-bottom h1{font-size:clamp(46px,5.2vw,76px)}
+.studio-page .studio-hero-bottom .studio-promise{font-size:20px;margin-top:16px;color:#d9b66b}
+.studio-guide-link{margin:32px 0 0;font-size:15px;color:#d9b66b}
+.studio-page .game-index{grid-template-columns:repeat(4,minmax(0,1fr))}
+.studio-page .game-index>a{padding-inline:2.5vw}
+.nocturne-feature{background:#151a2d;color:#f5ead1}
+.nocturne-art{min-height:0;aspect-ratio:1;background:#10182a;border-radius:28px;overflow:hidden}
+.nocturne-art img{object-fit:contain;border-radius:0}
+.nocturne-art .art-caption{background:#10182aeb;color:#f5ead1}
+.nocturne-feature .kicker{color:#d9b66b}
+.nocturne-feature .pill{background:#d9b66b;color:#10182a}
+.nocturne-feature .fineprint{color:#ccd0df}
+@media(max-width:1000px){.studio-page .game-index{grid-template-columns:repeat(2,minmax(0,1fr))}.studio-page .game-index>a:nth-child(3){border-left:0}.studio-page .game-index>a:nth-child(n+3){border-top:1px solid var(--line)}}
+@media(max-width:700px){.studio-page .game-index{grid-template-columns:1fr}.studio-page .game-index>a{padding-inline:6vw}.studio-page .game-index>a+a{border-left:0}.studio-page .studio-hero-bottom .studio-promise{margin-bottom:24px}.nocturne-art{aspect-ratio:1}}

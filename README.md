@@ -7,11 +7,18 @@ Preserve CNAME, `.nojekyll`, the official game logo, and the App Store badge.
 
 ## Current availability
 
-October 29, 2026: cache-busted Apple US and GB public lookups confirm all three
-studio games are available and free: Shut Up Fly 1.20 (iOS/iPadOS 18+),
-Bill Sergeant 1.0.1 and Whoopdy Doo 1.0 (both iOS/iPadOS 17+). All three
-support iPhone and iPad. Studio download buttons now link to their public
-App Store records. Older dated verification notes below are historical.
+November 5, 2026: Apple US/GB public lookups confirm four free studio games:
+Shut Up Fly 1.20 (iOS/iPadOS 18+), Bill Sergeant 1.0.1, Whoopdy Doo 1.1,
+and Nocturne Loom 1.0 (the latter three iOS/iPadOS 17+). All support iPhone
+and iPad. Preserve the PixelPicked badge on Bill Sergeant's studio section.
+
+`/studio/` is the canonical MUNTED Studio / MUNTED organization page.
+`/best-iphone-games/` is a publisher-disclosed guide to our four games, with
+an optional play-style and OS finder. All game facts remain in the static
+HTML when JavaScript is unavailable. It links to Whoopdy Doo's separate
+mountain-bike comparison guide. Avoid unsupported rankings or awards and
+use public release facts, not development build features. The studio kit
+now includes the official Nocturne Loom icon and all four game facts.
 
 ## Search and download intent
 

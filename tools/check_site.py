@@ -12,6 +12,7 @@ APP = 'https://apps.apple.com/us/app/shut-up-fly/id6797986930'
 CAMPAIGN_APP = 'https://apps.apple.com/app/apple-store/id6797986930?pt=127545438&ct=website&mt=8'
 CAMPAIGN_PARAMS = {'pt': ['127545438'], 'ct': ['website'], 'mt': ['8']}
 OTHER_APPS = {
+    'Nocturne Loom': 'https://apps.apple.com/us/app/nocturne-loom/id6826996142',
     'Bill Sergeant': 'https://apps.apple.com/us/app/bill-sergeant/id6826397921',
     'Whoopdy Doo': 'https://apps.apple.com/us/app/whoopdy-doo/id6826962497',
 }
@@ -57,7 +58,7 @@ def path_for(url):
 
 
 urls = [node.text for node in ET.parse(ROOT / 'sitemap.xml').findall('.//{*}loc')]
-assert len(urls) == len(set(urls)) == 9, 'Sitemap should list nine unique canonical pages'
+assert len(urls) == len(set(urls)) == 10, 'Sitemap should list ten unique canonical pages'
 pages = {url: Page(path_for(url)) for url in urls}
 titles = []
 for url, page in pages.items():
@@ -85,12 +86,12 @@ for url, page in pages.items():
     assert downloads, (url, 'missing download action')
     for link in downloads:
         if link['href'] in OTHER_APPS.values():
-            assert url in (ORIGIN + '/studio/', ORIGIN + '/studio/press/'), (url, 'unexpected portfolio download')
+            assert url in (ORIGIN + '/studio/', ORIGIN + '/studio/press/', ORIGIN + '/best-iphone-games/'), (url, 'unexpected portfolio download')
         else:
             assert link['href'] == CAMPAIGN_APP, (url, 'download campaign mismatch')
             assert parse_qs(urlsplit(link['href']).query) == CAMPAIGN_PARAMS
     banners = page.find('meta', name='apple-itunes-app')
-    if url not in (ORIGIN + '/privacy/', ORIGIN + '/studio/press/'):
+    if url not in (ORIGIN + '/privacy/', ORIGIN + '/studio/press/', ORIGIN + '/best-iphone-games/'):
         assert len(banners) == 1, (url, 'one Smart App Banner required')
     for banner in banners:
         settings = dict(part.strip().split('=', 1) for part in banner['content'].split(','))
@@ -120,6 +121,16 @@ for entry in collection['mainEntity']['itemListElement'][1:]:
     assert item['offers']['price'] == '0'
     assert item['operatingSystem'] == 'iOS 17.0 or later'
     assert studio.find('a', href=item['downloadUrl']), ('missing studio download', item['name'])
+assert organization['alternateName'] == 'MUNTED'
+assert len(collection['mainEntity']['itemListElement']) == 4
+guide = pages[ORIGIN + '/best-iphone-games/']
+assert studio.find('a', href='/best-iphone-games/') and home.find('a', href='/best-iphone-games/')
+assert len(guide.find('article', **{'class': 'guide-card'})) == 4
+assert 'hidden' in guide.find('form', id='game-finder')[0], 'Finder needs a no-script fallback'
+assert all('hidden' not in a for a in guide.find('article', **{'class': 'guide-card'})), 'Game facts must be visible without JavaScript'
+assert guide.schemas[0]['@graph'][0]['publisher']['@id'] == organization['@id']
+for app_url in (CAMPAIGN_APP, *OTHER_APPS.values()):
+    assert guide.find('a', href=app_url), ('guide download missing', app_url)
 studio_press = pages[ORIGIN + '/studio/press/']
 assert studio.find('a', href='/studio/press/'), 'Studio press kit must be discoverable'
 assert studio_press.schemas[0]['@graph'][0]['about']['@id'] == organization['@id']
@@ -150,7 +161,7 @@ with ZipFile(ROOT / 'studio/press/munted-press-kit.zip') as bundle:
     expected = {f'assets/{name}': ROOT / 'media' / name for name in (
         'munted-studio.png', 'munted-social.png', 'game-logo-cutout-v1.webp',
         'hero-universe-v1.jpg', 'bill-sergeant-logo.webp', 'bill-sergeant-vault.webp',
-        'whoopdy-doo-logo.webp', 'whoopdy-doo-mountain.webp')}
+        'whoopdy-doo-logo.webp', 'whoopdy-doo-mountain.webp', 'nocturne-loom-icon.jpg')}
     expected['facts.txt'] = ROOT / 'studio/press/facts.txt'
     assert set(bundle.namelist()) == set(expected), 'Unexpected or missing studio press asset'
     for name, source in expected.items():

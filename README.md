@@ -121,17 +121,18 @@ The studio collection and homepage game metadata share that identity. Keep
 structured facts consistent with visible copy; upcoming games must remain
 labelled upcoming. Do not invent aliases, ratings, awards, or external profiles.
 
-The public studio portfolio includes Shut Up Fly, Bill Sergeant, and Whoopdy Doo.
-All three public releases were verified on October 29, 2026. Whoopdy Doo's
+The public studio portfolio includes Shut Up Fly, Bill Sergeant, Whoopdy Doo
+and Nocturne Loom. All four public releases were verified on November 5, 2026. Whoopdy Doo's
 game, support and privacy pages are at https://timhudsonacs.github.io/whoopdy-doo-site/.
 The mountain illustration and title sign are promotional artwork, not gameplay
 screenshots. Change release labels only after public-store verification.
 
 The studio-wide press kit is `/studio/press/`, distinct from Shut Up Fly's
-`/press/` game materials. Its ZIP contains the eight logos/artwork listed in
+`/press/` game materials. Its ZIP contains the nine logos/artwork listed in
 `studio/press/facts.txt` and that fact sheet. Keep the ZIP byte-consistent with
 its sources and the date of verified public facts. Do not include private
-growth plans, metrics or outreach drafts. Bill Sergeant and Whoopdy Doo use
+growth plans, metrics or outreach drafts. Bill Sergeant, Whoopdy Doo and
+Nocturne Loom use
 their canonical App Store links; the existing Shut Up Fly website campaign
 and public provider token remain unchanged.
 

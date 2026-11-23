@@ -30,13 +30,6 @@
 .bill-feature .pill:hover{background:#f6e7be}
 .bill-feature .fineprint{color:#bdc3cc}
 .whoopdy-feature{background:#17372f;color:#f5ebd4;border-bottom:1px solid #496454}
-.whoopdy-game{display:block}
-.whoopdy-art{min-height:0;aspect-ratio:1915/821;overflow:hidden;border-radius:24px}
-.whoopdy-art .whoopdy-poster{position:absolute;inset:0;border-radius:0;object-position:center}
-.whoopdy-art .whoopdy-logo{position:absolute;top:10%;left:4%;width:36%;height:auto;object-fit:contain;border-radius:0;filter:drop-shadow(0 6px 14px #101d2e66)}
-.whoopdy-art .art-caption{background:#17372feb;color:#f5ebd4}
-.whoopdy-story{display:grid;grid-template-columns:1.1fr 1fr;gap:6vw;margin-top:48px}
-.whoopdy-feature .kicker{color:#efb66d}
 .whoopdy-feature .pill{background:#efb66d;color:#17372f}
 .whoopdy-feature .pill:hover{background:#f6d3a6}
 .whoopdy-feature .fineprint{color:#cad6c9}
@@ -46,7 +39,7 @@
 @media(max-width:700px){.studio-page .signature{margin:32px 0 38px}.game-index{grid-template-columns:1fr}.game-index>a{padding:24px 6vw}.game-index>a+a{border-left:0;border-top:1px solid var(--line)}.game-index strong{font-size:27px}.game-index small{font-size:11px}.game-status{font-size:9px}.bill-game{grid-template-columns:1fr;gap:36px}.bill-art{grid-column:auto;min-height:0;aspect-ratio:2/3;grid-row:1}.bill-game .game-story{grid-column:auto;grid-row:2}.bill-art .bill-poster{border-radius:140px 140px 4px 4px}.bill-art .bill-logo{top:8%}.bill-art .art-caption{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.game-index>a{transition:none}}
 @media(max-width:1000px){.studio-page .studio-links{grid-template-columns:repeat(2,minmax(0,1fr))}.studio-page .studio-links>a:nth-child(2n){border-right:0}.studio-page .studio-links>a:nth-child(n+3){border-top:1px solid var(--line)}}
-@media(max-width:700px){.whoopdy-art{aspect-ratio:auto;overflow:visible;border-radius:0}.whoopdy-art .whoopdy-poster{position:static;aspect-ratio:1/1.1;height:auto;object-position:75% center;border-radius:140px 140px 4px 4px}.whoopdy-art .whoopdy-logo{position:relative;top:auto;bottom:auto;left:auto;width:82%;margin:-32px auto 0}.whoopdy-art .art-caption{position:static;margin:14px auto 0;font-size:10px}.whoopdy-story{grid-template-columns:1fr;gap:0;margin-top:36px}.studio-page .studio-links{grid-template-columns:1fr}.studio-page .studio-links>a:nth-child(n+3){border-top:0}}
+@media(max-width:700px){.studio-page .studio-links{grid-template-columns:1fr}.studio-page .studio-links>a:nth-child(n+3){border-top:0}}
 
 /* MUNTED identity uses the supplied artwork without its preview controls. */
 .studio-footer{background:#0e1e31}
@@ -79,3 +72,19 @@
 .nocturne-feature .fineprint{color:#ccd0df}
 @media(max-width:1000px){.studio-page .game-index{grid-template-columns:repeat(2,minmax(0,1fr))}.studio-page .game-index>a:nth-child(3){border-left:0}.studio-page .game-index>a:nth-child(n+3){border-top:1px solid var(--line)}}
 @media(max-width:700px){.studio-page .game-index{grid-template-columns:1fr}.studio-page .game-index>a{padding-inline:6vw}.studio-page .game-index>a+a{border-left:0}.studio-page .studio-hero-bottom .studio-promise{margin-bottom:24px}.nocturne-art{aspect-ratio:1}}
+
+.studio-guide-link { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+.mtb-feature { grid-template-columns: 1fr 1.2fr; padding-block: clamp(36px, 6vw, 90px); }
+.mtb-logo { width: min(215px, 62%); margin-bottom: 12px; }
+.mtb-feature .game-story h2 { margin-bottom: 12px; }
+.mtb-feature .large-copy { margin-bottom: 14px; }
+.mtb-feature .studio-actions { margin: 24px 0 10px; }
+.mtb-feature .pill { gap: 12px; }
+.mtb-feature .fineprint { font-size: 14px; }
+.mtb-links { display: grid; gap: 8px; padding: 0; margin: 20px 0 0; list-style: none; font-size: 15px; }
+.mtb-preview { margin: 0; }
+.mtb-preview video { display: block; width: 100%; height: auto; aspect-ratio: 960 / 444; background: #101d19; border-radius: 18px; }
+.mtb-preview figcaption { margin-top: 10px; color: #cad6c9; font-size: 14px; }
+@media (max-width: 850px) {
+  .mtb-feature { grid-template-columns: 1fr; gap: 24px; }
+}

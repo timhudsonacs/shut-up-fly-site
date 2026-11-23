@@ -11,10 +11,11 @@ ORIGIN = 'https://shutupfly.timhudson.com'
 APP = 'https://apps.apple.com/us/app/shut-up-fly/id6797986930'
 CAMPAIGN_APP = 'https://apps.apple.com/app/apple-store/id6797986930?pt=127545438&ct=website&mt=8'
 CAMPAIGN_PARAMS = {'pt': ['127545438'], 'ct': ['website'], 'mt': ['8']}
+MTB_STUDIO_APP = 'https://apps.apple.com/app/apple-store/id6826962497?pt=127545438&ct=mtb_studio&mt=8'
 OTHER_APPS = {
     'Nocturne Loom': 'https://apps.apple.com/us/app/nocturne-loom/id6826996142',
     'Bill Sergeant': 'https://apps.apple.com/us/app/bill-sergeant/id6826397921',
-    'Whoopdy Doo': 'https://apps.apple.com/us/app/whoopdy-doo/id6826962497',
+    'MUNTED: MTB': 'https://apps.apple.com/us/app/whoopdy-doo/id6826962497',
 }
 
 
@@ -85,13 +86,15 @@ for url, page in pages.items():
     downloads = [a for a in page.find('a') if urlsplit(a.get('href', '')).hostname == 'apps.apple.com']
     assert downloads, (url, 'missing download action')
     for link in downloads:
-        if link['href'] in OTHER_APPS.values():
+        if link['href'] == MTB_STUDIO_APP:
+            assert url == ORIGIN + '/studio/'
+        elif link['href'] in OTHER_APPS.values():
             assert url in (ORIGIN + '/studio/', ORIGIN + '/studio/press/', ORIGIN + '/best-iphone-games/'), (url, 'unexpected portfolio download')
         else:
             assert link['href'] == CAMPAIGN_APP, (url, 'download campaign mismatch')
             assert parse_qs(urlsplit(link['href']).query) == CAMPAIGN_PARAMS
     banners = page.find('meta', name='apple-itunes-app')
-    if url not in (ORIGIN + '/privacy/', ORIGIN + '/studio/press/', ORIGIN + '/best-iphone-games/'):
+    if url not in (ORIGIN + '/privacy/', ORIGIN + '/studio/', ORIGIN + '/studio/press/', ORIGIN + '/best-iphone-games/'):
         assert len(banners) == 1, (url, 'one Smart App Banner required')
     for banner in banners:
         settings = dict(part.strip().split('=', 1) for part in banner['content'].split(','))
@@ -120,7 +123,12 @@ for entry in collection['mainEntity']['itemListElement'][1:]:
     assert item['downloadUrl'] == OTHER_APPS[item['name']]
     assert item['offers']['price'] == '0'
     assert item['operatingSystem'] == 'iOS 17.0 or later'
-    assert studio.find('a', href=item['downloadUrl']), ('missing studio download', item['name'])
+    if item['name'] == 'MUNTED: MTB':
+        assert item['alternateName'] == 'Whoopdy Doo'
+        assert studio.find('a', href=MTB_STUDIO_APP)
+        assert not studio.find('meta', name='apple-itunes-app')
+    else:
+        assert studio.find('a', href=item['downloadUrl']), ('missing studio download', item['name'])
 assert organization['alternateName'] == 'MUNTED'
 assert len(collection['mainEntity']['itemListElement']) == 4
 guide = pages[ORIGIN + '/best-iphone-games/']
@@ -161,7 +169,8 @@ with ZipFile(ROOT / 'studio/press/munted-press-kit.zip') as bundle:
     expected = {f'assets/{name}': ROOT / 'media' / name for name in (
         'munted-studio.png', 'munted-social.png', 'game-logo-cutout-v1.webp',
         'hero-universe-v1.jpg', 'bill-sergeant-logo.webp', 'bill-sergeant-vault.webp',
-        'whoopdy-doo-logo.webp', 'whoopdy-doo-mountain.webp', 'nocturne-loom-icon.jpg')}
+        'whoopdy-doo-logo.webp', 'whoopdy-doo-mountain.webp', 'nocturne-loom-icon.jpg',
+        'munted-mtb-logo.webp', 'fern-and-fable-preview.webp')}
     expected['facts.txt'] = ROOT / 'studio/press/facts.txt'
     assert set(bundle.namelist()) == set(expected), 'Unexpected or missing studio press asset'
     for name, source in expected.items():

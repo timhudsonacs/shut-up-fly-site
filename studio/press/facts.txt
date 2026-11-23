@@ -54,7 +54,7 @@ assets/hero-universe-v1.jpg: Shut Up Fly illustrated key art, 1600 x 900.
 assets/bill-sergeant-logo.webp: Bill Sergeant logo.
 assets/bill-sergeant-vault.webp: Bill Sergeant illustrated key art, 1024 x 1536.
 assets/munted-mtb-logo.webp: official MUNTED: MTB logo.
-assets/fern-and-fable-preview.webp: iPhone gameplay still from the version 1.1 preview, 960 x 444.
+assets/fern-and-fable-gameplay.webp: iPhone gameplay still from the version 1.1 preview, 960 x 444.
 assets/whoopdy-doo-logo.webp: Whoopdy Doo release logo.
 assets/whoopdy-doo-mountain.webp: Whoopdy Doo illustrated key art, 1915 x 821.
 assets/nocturne-loom-icon.jpg: official Nocturne Loom App Store icon, 512 x 512.

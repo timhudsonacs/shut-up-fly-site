@@ -170,7 +170,7 @@ with ZipFile(ROOT / 'studio/press/munted-press-kit.zip') as bundle:
         'munted-studio.png', 'munted-social.png', 'game-logo-cutout-v1.webp',
         'hero-universe-v1.jpg', 'bill-sergeant-logo.webp', 'bill-sergeant-vault.webp',
         'whoopdy-doo-logo.webp', 'whoopdy-doo-mountain.webp', 'nocturne-loom-icon.jpg',
-        'munted-mtb-logo.webp', 'fern-and-fable-preview.webp')}
+        'munted-mtb-logo.webp', 'fern-and-fable-gameplay.webp')}
     expected['facts.txt'] = ROOT / 'studio/press/facts.txt'
     assert set(bundle.namelist()) == set(expected), 'Unexpected or missing studio press asset'
     for name, source in expected.items():

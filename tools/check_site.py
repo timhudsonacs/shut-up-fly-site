@@ -17,6 +17,8 @@ OTHER_APPS = {
     'Bill Sergeant': 'https://apps.apple.com/us/app/bill-sergeant/id6826397921',
     'MUNTED: MTB': 'https://apps.apple.com/us/app/whoopdy-doo/id6826962497',
 }
+PORTFOLIO_ROUTES = {ORIGIN + route for route in ('/studio/', '/studio/press/', '/best-iphone-games/')}
+PORTFOLIO_DOWNLOADS = OTHER_APPS | {'MUNTED: MTB': MTB_STUDIO_APP}
 
 
 class Page(HTMLParser):
@@ -86,15 +88,13 @@ for url, page in pages.items():
     downloads = [a for a in page.find('a') if urlsplit(a.get('href', '')).hostname == 'apps.apple.com']
     assert downloads, (url, 'missing download action')
     for link in downloads:
-        if link['href'] == MTB_STUDIO_APP:
-            assert url == ORIGIN + '/studio/'
-        elif link['href'] in OTHER_APPS.values():
-            assert url in (ORIGIN + '/studio/', ORIGIN + '/studio/press/', ORIGIN + '/best-iphone-games/'), (url, 'unexpected portfolio download')
+        if link['href'] in PORTFOLIO_DOWNLOADS.values():
+            assert url in PORTFOLIO_ROUTES, (url, 'unexpected portfolio download')
         else:
             assert link['href'] == CAMPAIGN_APP, (url, 'download campaign mismatch')
             assert parse_qs(urlsplit(link['href']).query) == CAMPAIGN_PARAMS
     banners = page.find('meta', name='apple-itunes-app')
-    if url not in (ORIGIN + '/privacy/', ORIGIN + '/studio/', ORIGIN + '/studio/press/', ORIGIN + '/best-iphone-games/'):
+    if url not in PORTFOLIO_ROUTES and url != ORIGIN + '/privacy/':
         assert len(banners) == 1, (url, 'one Smart App Banner required')
     for banner in banners:
         settings = dict(part.strip().split('=', 1) for part in banner['content'].split(','))
@@ -125,10 +125,8 @@ for entry in collection['mainEntity']['itemListElement'][1:]:
     assert item['operatingSystem'] == 'iOS 17.0 or later'
     if item['name'] == 'MUNTED: MTB':
         assert item['alternateName'] == 'Whoopdy Doo'
-        assert studio.find('a', href=MTB_STUDIO_APP)
         assert not studio.find('meta', name='apple-itunes-app')
-    else:
-        assert studio.find('a', href=item['downloadUrl']), ('missing studio download', item['name'])
+    assert studio.find('a', href=PORTFOLIO_DOWNLOADS[item['name']]), ('missing studio download', item['name'])
 assert organization['alternateName'] == 'MUNTED'
 assert len(collection['mainEntity']['itemListElement']) == 4
 guide = pages[ORIGIN + '/best-iphone-games/']
@@ -137,12 +135,12 @@ assert len(guide.find('article', **{'class': 'guide-card'})) == 4
 assert 'hidden' in guide.find('form', id='game-finder')[0], 'Finder needs a no-script fallback'
 assert all('hidden' not in a for a in guide.find('article', **{'class': 'guide-card'})), 'Game facts must be visible without JavaScript'
 assert guide.schemas[0]['@graph'][0]['publisher']['@id'] == organization['@id']
-for app_url in (CAMPAIGN_APP, *OTHER_APPS.values()):
+for app_url in (CAMPAIGN_APP, *PORTFOLIO_DOWNLOADS.values()):
     assert guide.find('a', href=app_url), ('guide download missing', app_url)
 studio_press = pages[ORIGIN + '/studio/press/']
 assert studio.find('a', href='/studio/press/'), 'Studio press kit must be discoverable'
 assert studio_press.schemas[0]['@graph'][0]['about']['@id'] == organization['@id']
-for app_url in (CAMPAIGN_APP, *OTHER_APPS.values()):
+for app_url in (CAMPAIGN_APP, *PORTFOLIO_DOWNLOADS.values()):
     assert studio_press.find('a', href=app_url), ('missing studio press download', app_url)
 for route in ('/offline-iphone-game/', '/how-to-play/', '/press/'):
     assert home.find('a', href=route), ('unlinked guide', route)

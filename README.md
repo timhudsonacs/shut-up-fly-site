@@ -127,7 +127,7 @@ The studio-wide press kit is `/studio/press/`, distinct from Shut Up Fly's
 `/press/` game materials. Its ZIP contains the assets listed in
 `studio/press/facts.txt` and that fact sheet. Keep the ZIP byte-consistent with
 its sources and the date of verified public facts. Do not include private
-growth plans, metrics or outreach drafts. The MTB section uses the Apple campaign token `mtb_studio`. Keep the clean product URL in structured data. The studio portfolio omits a single-app Safari banner so the shown action matches the game the visitor chooses.
+growth plans, metrics or outreach drafts. The portfolio, iPhone games guide and studio press card use the Apple campaign token `mtb_studio` for their MUNTED: MTB download buttons. Keep the clean product URL in structured data and press facts. The studio portfolio omits a single-app Safari banner so the shown action matches the game the visitor chooses.
 
 ## MUNTED brand assets
 

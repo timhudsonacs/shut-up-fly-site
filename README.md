@@ -136,6 +136,6 @@ responsive WebPs and favicon use the same lettering. The studio hero plays
 the silent 1080p Munty opening once, supports replay and shows the still
 when reduced motion is preferred or playback is unavailable.
 
-Existing media URLs serve the updated artwork. The press downloads package
-the new marks under Munty filenames. The studio animation is also available
-as a separate 4.3-second MP4.
+Use the Munty filenames for media, social previews and press downloads. The
+earlier media and ZIP URLs serve identical files for existing links. The
+studio animation is available as a separate 4.3-second MP4.

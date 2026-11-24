@@ -59,7 +59,7 @@ assets/whoopdy-doo-logo.webp: Whoopdy Doo release logo.
 assets/whoopdy-doo-mountain.webp: Whoopdy Doo illustrated key art, 1915 x 821.
 assets/nocturne-loom-icon.jpg: official Nocturne Loom App Store icon, 512 x 512.
 
-Separate animated studio opening: https://shutupfly.timhudson.com/media/munted-splash-animated.mp4?v=munty-gold-navy
+Separate animated studio opening: https://shutupfly.timhudson.com/media/munty-splash-animated.mp4?v=munty-gold-navy
 Silent MP4, 1920 x 1080, 4.3 seconds. Not included in the ZIP.
 
 ASSET AND PRODUCTION NOTES

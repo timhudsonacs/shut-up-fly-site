@@ -155,24 +155,32 @@ with ZipFile(ROOT / 'press/shut-up-fly-images-and-facts.zip') as bundle:
     assert bundle.testzip() is None, 'Corrupt press download'
     expected = {f'assets/{p.name}': p for p in (ROOT / 'media/press-1.12').glob('*.png')}
     assert len(expected) == 6, 'Expected six version 1.12 screenshots'
-    expected.update({f'assets/{name.replace("munted-", "munty-", 1)}': ROOT / 'media' / name for name in
-                     ('game-logo-cutout-v1.webp', 'hero-universe-v1.jpg', 'munted-studio.png')})
+    expected.update({f'assets/{name}': ROOT / 'media' / name for name in
+                     ('game-logo-cutout-v1.webp', 'hero-universe-v1.jpg', 'munty-studio.png')})
     expected['facts.txt'] = ROOT / 'press/facts.txt'
     assert set(bundle.namelist()) == set(expected), 'Unexpected or missing press asset'
     for name, source in expected.items():
         assert bundle.read(name) == source.read_bytes(), ('Stale press asset', name)
 
-with ZipFile(ROOT / 'studio/press/munted-press-kit.zip') as bundle:
+with ZipFile(ROOT / 'studio/press/munty-press-kit.zip') as bundle:
     assert bundle.testzip() is None, 'Corrupt studio press download'
-    expected = {f'assets/{name.replace("munted-", "munty-", 1)}': ROOT / 'media' / name for name in (
-        'munted-studio.png', 'munted-social.png', 'game-logo-cutout-v1.webp',
+    expected = {f'assets/{name}': ROOT / 'media' / name for name in (
+        'munty-studio.png', 'munty-social.png', 'game-logo-cutout-v1.webp',
         'hero-universe-v1.jpg', 'bill-sergeant-logo.webp', 'bill-sergeant-vault.webp',
         'whoopdy-doo-logo.webp', 'whoopdy-doo-mountain.webp', 'nocturne-loom-icon.jpg',
-        'munted-mtb-logo.webp', 'fern-and-fable-gameplay.webp')}
+        'munty-mtb-logo.webp', 'fern-and-fable-gameplay.webp')}
     expected['facts.txt'] = ROOT / 'studio/press/facts.txt'
     assert set(bundle.namelist()) == set(expected), 'Unexpected or missing studio press asset'
     for name, source in expected.items():
         assert bundle.read(name) == source.read_bytes(), ('Stale studio press asset', name)
+
+assert studio_press.find('a', href='/studio/press/munty-press-kit.zip', download='munty-press-kit.zip')
+for suffix in ('studio.png', 'social.png', 'studio-icon.png', 'studio-832.webp',
+               'studio-1672.webp', 'splash-animated.mp4', 'mtb-logo.webp'):
+    current = ROOT / 'media' / f'munty-{suffix}'
+    published_alias = current.with_name(f'munted-{suffix}')
+    assert current.read_bytes() == published_alias.read_bytes(), ('Stale published media link', published_alias)
+assert (ROOT / 'studio/press/munty-press-kit.zip').read_bytes() == (ROOT / 'studio/press/munted-press-kit.zip').read_bytes()
 
 robots = (ROOT / 'robots.txt').read_text()
 assert 'Disallow: /' not in robots

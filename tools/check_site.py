@@ -15,10 +15,10 @@ MTB_STUDIO_APP = 'https://apps.apple.com/app/apple-store/id6826962497?pt=1275454
 OTHER_APPS = {
     'Nocturne Loom': 'https://apps.apple.com/us/app/nocturne-loom/id6826996142',
     'Bill Sergeant': 'https://apps.apple.com/us/app/bill-sergeant/id6826397921',
-    'MUNTED: MTB': 'https://apps.apple.com/us/app/whoopdy-doo/id6826962497',
+    'MUNTY: MTB': 'https://apps.apple.com/us/app/whoopdy-doo/id6826962497',
 }
 PORTFOLIO_ROUTES = {ORIGIN + route for route in ('/studio/', '/studio/press/', '/best-iphone-games/')}
-PORTFOLIO_DOWNLOADS = OTHER_APPS | {'MUNTED: MTB': MTB_STUDIO_APP}
+PORTFOLIO_DOWNLOADS = OTHER_APPS | {'MUNTY: MTB': MTB_STUDIO_APP}
 
 
 class Page(HTMLParser):
@@ -111,7 +111,7 @@ assert 'aggregateRating' not in game and 'review' not in game, 'Do not invent or
 studio = pages[ORIGIN + '/studio/']
 studio_graph = studio.schemas[0]['@graph']
 organization = next(node for node in studio_graph if node['@type'] == 'Organization')
-assert organization['name'] == 'MUNTED Studio'
+assert organization['name'] == 'MUNTY Studio'
 assert organization['url'] == ORIGIN + '/studio/'
 assert game['creator']['@id'] == organization['@id'], 'Game must identify the canonical studio'
 collection = next(node for node in studio_graph if node['@type'] == 'CollectionPage')
@@ -123,11 +123,11 @@ for entry in collection['mainEntity']['itemListElement'][1:]:
     assert item['downloadUrl'] == OTHER_APPS[item['name']]
     assert item['offers']['price'] == '0'
     assert item['operatingSystem'] == 'iOS 17.0 or later'
-    if item['name'] == 'MUNTED: MTB':
+    if item['name'] == 'MUNTY: MTB':
         assert item['alternateName'] == 'Whoopdy Doo'
         assert not studio.find('meta', name='apple-itunes-app')
     assert studio.find('a', href=PORTFOLIO_DOWNLOADS[item['name']]), ('missing studio download', item['name'])
-assert organization['alternateName'] == 'MUNTED'
+assert organization['alternateName'] == 'MUNTY'
 assert len(collection['mainEntity']['itemListElement']) == 4
 guide = pages[ORIGIN + '/best-iphone-games/']
 assert studio.find('a', href='/best-iphone-games/') and home.find('a', href='/best-iphone-games/')
@@ -155,7 +155,7 @@ with ZipFile(ROOT / 'press/shut-up-fly-images-and-facts.zip') as bundle:
     assert bundle.testzip() is None, 'Corrupt press download'
     expected = {f'assets/{p.name}': p for p in (ROOT / 'media/press-1.12').glob('*.png')}
     assert len(expected) == 6, 'Expected six version 1.12 screenshots'
-    expected.update({f'assets/{name}': ROOT / 'media' / name for name in
+    expected.update({f'assets/{name.replace("munted-", "munty-", 1)}': ROOT / 'media' / name for name in
                      ('game-logo-cutout-v1.webp', 'hero-universe-v1.jpg', 'munted-studio.png')})
     expected['facts.txt'] = ROOT / 'press/facts.txt'
     assert set(bundle.namelist()) == set(expected), 'Unexpected or missing press asset'
@@ -164,7 +164,7 @@ with ZipFile(ROOT / 'press/shut-up-fly-images-and-facts.zip') as bundle:
 
 with ZipFile(ROOT / 'studio/press/munted-press-kit.zip') as bundle:
     assert bundle.testzip() is None, 'Corrupt studio press download'
-    expected = {f'assets/{name}': ROOT / 'media' / name for name in (
+    expected = {f'assets/{name.replace("munted-", "munty-", 1)}': ROOT / 'media' / name for name in (
         'munted-studio.png', 'munted-social.png', 'game-logo-cutout-v1.webp',
         'hero-universe-v1.jpg', 'bill-sergeant-logo.webp', 'bill-sergeant-vault.webp',
         'whoopdy-doo-logo.webp', 'whoopdy-doo-mountain.webp', 'nocturne-loom-icon.jpg',

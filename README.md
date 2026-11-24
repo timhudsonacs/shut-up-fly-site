@@ -12,7 +12,7 @@ Shut Up Fly 1.20 (iOS/iPadOS 18+), Bill Sergeant 1.0.1, Whoopdy Doo 1.1,
 and Nocturne Loom 1.0 (the latter three iOS/iPadOS 17+). All support iPhone
 and iPad. Preserve the PixelPicked badge on Bill Sergeant's studio section.
 
-`/studio/` is the canonical MUNTED Studio / MUNTED organization page.
+`/studio/` is the canonical MUNTY Studio / MUNTY organization page.
 `/best-iphone-games/` is a publisher-disclosed guide to our four games, with
 an optional play-style and OS finder. All game facts remain in the static
 HTML when JavaScript is unavailable. It links to Whoopdy Doo's separate
@@ -115,34 +115,27 @@ budget is approved. Complete independent work while any specific review is pendi
 
 ## Studio discovery identity
 
-The canonical studio home is `/studio/`, with the public name MUNTED Studio.
+The canonical studio home is `/studio/`, with the public name MUNTY Studio.
 Its Organization ID is `https://shutupfly.timhudson.com/studio/#organization`.
 The studio collection and homepage game metadata share that identity. Keep
 structured facts consistent with visible copy; upcoming games must remain
 labelled upcoming. Keep the actual App Store listing name visible whenever it differs from the studio branding.
 
-The MUNTED: MTB section retains the public `#whoopdy-doo` link. Use the supplied game logo and footage from the 1.1 iPhone preview. The game, support and privacy pages are at https://timhudsonacs.github.io/whoopdy-doo-site/. Apple currently lists the free download as Whoopdy Doo 1.1. Update that label when the public storefront changes.
+The MUNTY: MTB section retains the public `#whoopdy-doo` link. Use the supplied game logo and footage from the 1.1 iPhone preview. The game, support and privacy pages are at https://timhudsonacs.github.io/whoopdy-doo-site/. Apple currently lists the free download as Whoopdy Doo 1.1. Update that label when the public storefront changes.
 
 The studio-wide press kit is `/studio/press/`, distinct from Shut Up Fly's
 `/press/` game materials. Its ZIP contains the assets listed in
 `studio/press/facts.txt` and that fact sheet. Keep the ZIP byte-consistent with
 its sources and the date of verified public facts. Do not include private
-growth plans, metrics or outreach drafts. The portfolio, iPhone games guide and studio press card use the Apple campaign token `mtb_studio` for their MUNTED: MTB download buttons. Keep the clean product URL in structured data and press facts. The studio portfolio omits a single-app Safari banner so the shown action matches the game the visitor chooses.
+growth plans, metrics or outreach drafts. The portfolio, iPhone games guide and studio press card use the Apple campaign token `mtb_studio` for their MUNTY: MTB download buttons. Keep the clean product URL in structured data and press facts. The studio portfolio omits a single-app Safari banner so the shown action matches the game the visitor chooses.
 
-## MUNTED brand assets
+## Munty studio artwork
 
-Studio branding changed to MUNTED on October 27, 2026. Use
-`media/munted-studio.png` (the supplied 1280 × 720 artwork) and
-`media/munted-splash-animated.mp4` (the supplied silent 4.3-second 1080p animation).
-The studio hero plays once, supports replay, and shows the still artwork when
-reduced motion is preferred or playback is unavailable. Navigation crops the
-original artwork in CSS to show only the wordmark. The press bundle contains
-the new studio artwork; the animation is a separate download.
+The studio uses the Munty wordmark in gold on navy. The still, social card,
+responsive WebPs and favicon use the same lettering. The studio hero plays
+the silent 1080p Munty opening once, supports replay and shows the still
+when reduced motion is preferred or playback is unavailable.
 
-`media/munted-social.png` is a clean still exported at 2.7 seconds from the supplied
-animation for link previews. The original supplied artwork and animation are
-otherwise copied without changing their pixels or encoding.
-
-Current studio colorway: approved option 1, gold on navy. `munted-studio.png` and
-`munted-social.png` now use the approved 1672 × 941 artwork. The original silent
-4.3-second animation was recolored to match; its timing and lettering are unchanged.
+Existing media URLs serve the updated artwork. The press downloads package
+the new marks under Munty filenames. The studio animation is also available
+as a separate 4.3-second MP4.
